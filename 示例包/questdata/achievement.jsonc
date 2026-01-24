@@ -1,0 +1,83 @@
+[
+    //成就合并文件
+    {
+        //id
+        "id": "示例成就1",
+        //图片路径
+        "img": "/files/icon/example1.png",
+        //成就名
+        "name": "示例成就1",
+        //成就描述
+        "description": "我是一个示例成就",
+        //成就稀有度, 三个等级, Common/Rare/Legendary
+        "rarity": "Legendary",
+        //阵营? 我没试过
+        "side": "All",
+        //未知参数
+        "instantComplete": false,
+        //未知参数
+        "showNotificationsInGame": false,
+        //显示进度? 作用不明
+        "showProgress": false,
+        //是否为隐藏成就
+        "hidden": true,
+        //是否显示成就要求
+        "showConditions": false,
+        //显示进度条
+        "progressBarEnabled": false,
+        //成就要求
+        //与任务条件定义一致
+        //部分条件需求会导致成就出错, 推荐使用任务手动发放, 这里将成就条件设为无法完成(1000米外近战武器杀死btr射手10000个), 由任务发放成就
+        "conditions": {
+            "finish": [
+                {
+                    "$type": "kill",
+                    "id": "示例成就1_需求",
+                    //这个参数可以直接为任务条件添加本地化
+                    "locale": "消灭任意目标",
+                    "oneraid": false,
+                    "count": 10000,
+                    "counterid": "示例成就1_需求_计数器",
+                    "bot": "Savage",
+                    "role": [
+                        "shooterBTR"
+                    ],
+                    "conditionid": "示例成就1_需求_计数器_需求",
+                    "bodyPart": 0,
+                    "daytime": [
+                        0,
+                        0
+                    ],
+                    "distance": 1000,
+                    "distancetype": 3,
+                    "weapon": [
+                        "5bffdd7e0db834001b734a1a"
+                    ],
+                    "mod": [],
+                    "location": 8191,
+                    "zone": [],
+                    "equip": [],
+                    "enemyequip": []
+                }
+            ],
+            "failed": []
+        },
+        //成就奖励
+        //依然与任务定义一致
+        "rewards": [
+            {
+                //装饰内容奖励
+                "$type": "customization",
+                //目标ID
+                "Target": "示例狗牌样式",
+                //设置为成就的话这里就指向成就ID
+                "Quest": "示例成就1",
+                "Stage": 1,
+                "Hidden": false,
+                "Unknown": false,
+                "IsAchievement": true,
+                "ID": "示例成就1_装饰奖励"
+            }
+        ]
+    }
+]

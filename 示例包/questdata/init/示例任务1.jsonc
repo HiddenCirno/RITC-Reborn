@@ -1,0 +1,89 @@
+{
+    //任务ID
+    "ID": "示例任务1",
+    //任务类型(就是任务名左边小图标的显示)
+    "Type": 0,
+    //任务插图路径
+    "ImagePath": "/files/quest/icon/illust_56884409_20190928_114254.jpg",
+    //任务所属的商人
+    "TraderID": "ExampleTrader",
+    //任务地点(也是任务页面的显示, 具体ID定义有点复杂, 在ch文件里可以查询)
+    "Location": "any",
+    //失败后是否可以重新接取
+    "Restartable": false,
+    //任务条件数据
+    "QuestData": {
+        "Finish": [
+            {
+                //多态序列化, 找到物品类型
+                "$type": "find",
+                //任务条件ID, 全局唯一, 不可重复
+                "id": "示例任务1寻找物品1",
+                //是否要求带勾
+                "inraid": true,
+                //物品ID
+                "itemid": "60b0f93284c20f0feb453da7",
+                //物品数量
+                "count": 1
+            },
+            {
+                //上交物品类型, 除此处类型之外其余和上面一样
+                "$type": "hand",
+                "id": "示例任务1上交物品1",
+                "inraid": true,
+                "itemid": "60b0f93284c20f0feb453da7",
+                "count": 1
+            },
+            {
+                "$type": "find",
+                "id": "示例任务1寻找物品2",
+                "inraid": true,
+                "itemid": "5d1b33a686f7742523398398",
+                "count": 1
+            },
+            {
+                "$type": "hand",
+                "id": "示例任务1上交物品2",
+                "inraid": true,
+                "itemid": "5d1b33a686f7742523398398",
+                "count": 1
+            },
+            {
+                "$type": "find",
+                "id": "示例任务1寻找物品3",
+                "inraid": false,
+                "itemid": "示例任务物品",
+                "count": 1
+            },
+            {
+                "$type": "hand",
+                "id": "示例任务1上交物品3",
+                "inraid": false,
+                "itemid": "示例任务物品",
+                "count": 1
+            }
+        ],
+        "Failed": []
+    },
+    //任务奖励数据
+    "QuestReward": [
+        {
+            //任务奖励, 多态序列化, 经验奖励
+            "$type": "experience",
+            //任务奖励ID, 全局唯一, 不可重复
+            "ID": "示例任务1经验奖励1",
+            //任务阶段, 0开始1完成2失败, 部分奖励在失败阶段疑似无法正常发放, 自行测试
+            "Stage": 1,
+            //对应的任务/成就ID, 必填
+            "Quest": "示例任务1",
+            //数值
+            "Count": 2000,
+            //是否为隐藏奖励(此条目无效)
+            "Hidden": false,
+            //是否为未知奖励(即任务完成后才能看到具体奖励内容)
+            "Unknown": false,
+            //是否为成就奖励, 设置为true即可为成就添加奖励
+            "IsAchievement": false
+        }
+    ]
+}

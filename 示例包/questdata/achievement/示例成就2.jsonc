@@ -1,0 +1,58 @@
+{
+        //id
+        "id": "示例成就2",
+        //图片路径
+        "img": "/files/icon/example2.png",
+        //成就名
+        "name": "示例成就2",
+        //成就描述
+        "description": "我也是一个示例成就(消灭任意目标)",
+        //成就稀有度, 三个等级, Common/Rare/Legendary
+        "rarity": "Rare",
+        //阵营? 我没试过
+        "side": "All",
+        //未知参数
+        "instantComplete": false,
+        //未知参数
+        "showNotificationsInGame": false,
+        //显示进度? 作用不明
+        "showProgress": false,
+        //是否为隐藏成就
+        "hidden": false,
+        //是否显示成就要求
+        "showConditions": true,
+        //显示进度条
+        "progressBarEnabled": true,
+        //成就要求
+        //与任务条件定义一致
+        "conditions": {
+            "finish": [
+                {
+                    "$type": "kill",
+                    "id": "示例成就2_需求",
+                    "locale": "？？？",
+                    "oneraid": false,
+                    "count": 1,
+                    "counterid": "示例成就2_需求_计数器",
+                    "bot": "Savage",
+                    "role": [],
+                    "conditionid": "示例成就2_需求_计数器_需求",
+                    "bodyPart": 0,
+                    "daytime": [
+                        0,
+                        0
+                    ],
+                    "distance": 0,
+                    "distancetype": 3,
+                    "weapon": [],
+                    "mod": [],
+                    "location": 8191,
+                    "zone": [],
+                    "equip": [],
+                    "enemyequip": []
+                }
+            ],
+            "failed": []
+        },
+        "rewards": []
+    }

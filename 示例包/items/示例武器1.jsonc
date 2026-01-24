@@ -1,0 +1,51 @@
+{
+  //物品id
+  "_id": "示例武器1",
+  //复制的物品模板目标
+  "_targetid": "5aafa857e5b5b00018480968",
+  "_name": "示例武器1",
+  //原版物品参数, 具体定义自己参考原版寻思吧
+  //这个世界上除了尼基塔没人能解释清楚所有参数的含义
+  "_props": {
+    "Weight": 0.05,
+    "StackMaxSize": 1,
+    "weapFireType": [
+      "single",
+      "fullauto"
+    ]
+  },
+  //自定义物品参数
+  "_customprops": {
+    //自定义物品类型, 这里是武器类型
+    "$type": "weapon",
+    //物品名, 短名, 介绍, 必填
+    "Name": "示例武器",
+    "ShortName": "示例武器",
+    "Description": "独立物品范例。",
+    //基准价格, 也就是手册价格
+    "DefaultPrice": 320000,
+    //跳蚤市场价格, 不存在时自动fallback到基准价格
+    "RagfairPrice": 640000,
+    //跳蚤市场/手册分类标签, 必填
+    "RagfairType": "5b5f78fc86f77409407a7f90",
+    //是否能在战局里找到
+    "CanFindInRaid": true,
+    //是否使用自定义战利品数据
+    "CustomLoot": false,
+    //修复专精, 即将武器添加到复制源的专精列表内
+    "FixMastering": true,
+    //自定义专精目标, 这里仅做示例, 可以不填, 不填默认使用源物品
+    "CustomMasteringTarget": "5aafa857e5b5b00018480968",
+    //是否视为自定义货币处理
+    "isMoney": false,
+    //是否添加到3x4任务(即收藏家的需求)
+    "addToKappa": false,
+    //自动修复类型
+    "FixType": [
+      //Mods表示对槽位进行修复, 适用于荣誉展柜需要摆放的物品, 特殊装备, 配件, 耳机等
+      "Mods",
+      //任务武器, 单独的武器表示对任何使用复制源的任务条件进行兼容, 如需对武器列表(即多个武器的条件)进行兼容, 请使用QuestWeaponGroup
+      "QuestWeapon"
+    ]
+  }
+}

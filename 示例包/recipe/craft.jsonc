@@ -1,0 +1,28 @@
+{
+    //配方合并文件, 这里可以同时存储多个配方
+    "示例配方2": {
+        //锁定配方(需要任务解锁)
+        "$type": "locked",
+        "ID": "示例配方2",
+        "Area": 7,
+        "AreaLevel": 2,
+        "Output": "示例针剂1",
+        "OutputCount": 1,
+        "Time": 21600,
+        "NeedFuel": false,
+        //是否锁定
+        "Locked": true,
+        //任务
+        "Quest": "示例任务4",
+        //任务阶段
+        "QuestStage": 1,
+        //是否为不可见奖励(完成任务后才知道奖励内容)
+        "Unknown": true,
+        "Require": {
+            "Tool": {},
+            "Item": {
+                "544fb3f34bdc2d03748b456a": 2
+            }
+        }
+    }
+}

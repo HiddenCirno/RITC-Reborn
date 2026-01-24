@@ -1,0 +1,349 @@
+{
+    //卡池名称, 唯一标识
+    "name": "示例高级礼盒",
+    //保底设置
+    "basereward": {
+        //sr
+        "superrare": {
+            //是否启用保底机制
+            "havebasereward": true,
+            //原生概率, 参与计算
+            "chance": 0.04,
+            //抽到up内容的概率
+            "upchance": 0.5,
+            //未抽到up内容时下次抽到金色内容为up内容的概率提升(即保底累加, 0.5/0.5即是大小保底)
+            "upaddchance": 0.5,
+            //概率提升需要的累计次数
+            "chancegrowcount": 73,
+            //进入概率提升区间后每次抽卡增加的出金概率
+            "chancegrowpercount": 0.06
+            //实际保底计算规则为(1-原生概率)/提升概率 + 提升累计次数 + 1
+            //这里也就是(1-0.04)/0.06=16+73+1, 即最多90抽必出金
+            //以上仅在启用保底机制时生效
+        },
+        //r
+        "rare": {
+            //数据定义同上, 基本无需改动
+            "havebasereward": true,
+            "chance": 0.1,
+            "upchance": 0.75,
+            "upaddchance": 0.25,
+            "chancegrowcount": 0,
+            "chancegrowpercount": 0.1
+        },
+        //普通数据, 无用, 仅做保留, 不可删除
+        "normal": {
+            "upchance": 0
+        }
+    },
+    //卡池数据
+    "itempool": {
+        "superrare": {
+            //概率提升区(up内容)
+            "chanceup": [
+                {
+                    //普通物品类型, 多态序列化
+                    "$type": "Item",
+                    //物品名字段, 参与计算唯一ID, 不可重复
+                    "name": "红卡",
+                    //物品ID
+                    "itemid": "5c1d0efb86f7744baf2e7b7b",
+                    //物品数量
+                    "stackcount": 1
+                }
+            ],
+            //普通内容
+            "normal": [
+                //定义重复的内容不再标注
+                {
+                    "$type": "Item",
+                    "name": "蓝卡",
+                    "itemid": "5c1d0c5f86f7744bb2683cf0",
+                    "stackcount": 1
+                },
+                {
+                    "$type": "Item",
+                    "name": "绿卡",
+                    "itemid": "5c1d0dc586f7744baf2e7b79",
+                    "stackcount": 1
+                },
+                {
+                    "$type": "Item",
+                    "name": "黑卡",
+                    "itemid": "5c1d0f4986f7744bb01837fa",
+                    "stackcount": 1
+                }
+            ]
+        },
+        "rare": {
+            "chanceup": [
+                {
+                    //自定义预设类型, 多态序列化
+                    "$type": "CustomPreset",
+                    //标识字段
+                    "name": "改枪测试1",
+                    //预设内容字段, 和原版格式完全一致
+                    "item": [
+                        {
+                            "_id": "报价单范例6",
+                            "_tpl": "5c07c60e0db834002330051f",
+                            "parentId": "hideout",
+                            "slotId": "hideout",
+                            "upd": {
+                                "FireMode": {
+                                    "FireMode": "single"
+                                }
+                            }
+                        },
+                        {
+                            "_id": "f99fd4e4792190af8264e040",
+                            "_tpl": "55802f5d4bdc2dac148b458f",
+                            "parentId": "报价单范例6",
+                            "slotId": "mod_pistol_grip"
+                        },
+                        {
+                            "_id": "54aeb81d4fc58408af288f66",
+                            "_tpl": "55802d5f4bdc2dac148b458e",
+                            "parentId": "报价单范例6",
+                            "slotId": "mod_magazine"
+                        },
+                        {
+                            "_id": "e119dc184c5c6f862255eda3",
+                            "_tpl": "63f5ed14534b2c3d5479a677",
+                            "parentId": "报价单范例6",
+                            "slotId": "mod_reciever"
+                        },
+                        {
+                            "_id": "eae2acd79148c665c95af0e0",
+                            "_tpl": "5c793fb92e221644f31bfb64",
+                            "parentId": "报价单范例6",
+                            "slotId": "mod_stock"
+                        },
+                        {
+                            "_id": "300cc34f501dae2e31cf7570",
+                            "_tpl": "5d44334ba4b9362b346d1948",
+                            "parentId": "报价单范例6",
+                            "slotId": "mod_charge"
+                        },
+                        {
+                            "_id": "1e811988684993b2b6dc0697",
+                            "_tpl": "618b9643526131765025ab35",
+                            "parentId": "e119dc184c5c6f862255eda3",
+                            "slotId": "mod_scope"
+                        },
+                        {
+                            "_id": "dab13a884ac5c221ff1df307",
+                            "_tpl": "63d3d44a2a49307baf09386d",
+                            "parentId": "e119dc184c5c6f862255eda3",
+                            "slotId": "mod_barrel"
+                        },
+                        {
+                            "_id": "a17318e21e6eeb7d237967af",
+                            "_tpl": "5c78f2492e221600114c9f04",
+                            "parentId": "e119dc184c5c6f862255eda3",
+                            "slotId": "mod_handguard"
+                        },
+                        {
+                            "_id": "eda3047b0819038a681f4e96",
+                            "_tpl": "5bc09a18d4351e003562b68e",
+                            "parentId": "e119dc184c5c6f862255eda3",
+                            "slotId": "mod_sight_rear",
+                            "upd": {
+                                "Sight": {
+                                    "ScopesCurrentCalibPointIndexes": [
+                                        0
+                                    ],
+                                    "ScopesSelectedModes": [
+                                        0
+                                    ],
+                                    "SelectedScope": 0
+                                }
+                            }
+                        },
+                        {
+                            "_id": "a1c6be0ee0065d0a42443e05",
+                            "_tpl": "56eabf3bd2720b75698b4569",
+                            "parentId": "eae2acd79148c665c95af0e0",
+                            "slotId": "mod_stock_000"
+                        },
+                        {
+                            "_id": "6117657b1a7870e59c21b2b2",
+                            "_tpl": "5b3b99475acfc432ff4dcbee",
+                            "parentId": "1e811988684993b2b6dc0697",
+                            "slotId": "mod_scope",
+                            "upd": {
+                                "Sight": {
+                                    "ScopesCurrentCalibPointIndexes": [
+                                        0
+                                    ],
+                                    "ScopesSelectedModes": [
+                                        0
+                                    ],
+                                    "SelectedScope": 0
+                                }
+                            }
+                        },
+                        {
+                            "_id": "67a587a8fbe9193defa1437c",
+                            "_tpl": "618b9671d14d6d5ab879c5ea",
+                            "parentId": "1e811988684993b2b6dc0697",
+                            "slotId": "mod_mount"
+                        },
+                        {
+                            "_id": "a1f89af831fd4cb62675c325",
+                            "_tpl": "6386120cd6baa055ad1e201c",
+                            "parentId": "dab13a884ac5c221ff1df307",
+                            "slotId": "mod_muzzle"
+                        },
+                        {
+                            "_id": "514e439d8c790de76c66f597",
+                            "_tpl": "63d3ce281fe77d0f2801859e",
+                            "parentId": "dab13a884ac5c221ff1df307",
+                            "slotId": "mod_gas_block"
+                        },
+                        {
+                            "_id": "e3d30be4ac03b2c879b9e92e",
+                            "_tpl": "6269220d70b6c02e665f2635",
+                            "parentId": "a17318e21e6eeb7d237967af",
+                            "slotId": "mod_mount_000"
+                        },
+                        {
+                            "_id": "4f8a5b9f488ce62b91ae82d1",
+                            "_tpl": "6269220d70b6c02e665f2635",
+                            "parentId": "a17318e21e6eeb7d237967af",
+                            "slotId": "mod_mount_001"
+                        },
+                        {
+                            "_id": "46c0502d171f4f4bf3dc7a4d",
+                            "_tpl": "5b7be4895acfc400170e2dd5",
+                            "parentId": "a17318e21e6eeb7d237967af",
+                            "slotId": "mod_foregrip"
+                        },
+                        {
+                            "_id": "0d4ba70a3d9a55e7d0b7806d",
+                            "_tpl": "5bc09a30d4351e00367fb7c8",
+                            "parentId": "a17318e21e6eeb7d237967af",
+                            "slotId": "mod_sight_front",
+                            "upd": {
+                                "Sight": {
+                                    "ScopesCurrentCalibPointIndexes": [
+                                        0
+                                    ],
+                                    "ScopesSelectedModes": [
+                                        0
+                                    ],
+                                    "SelectedScope": 0
+                                }
+                            }
+                        },
+                        {
+                            "_id": "d7c9b7dab618a4a0264dbb60",
+                            "_tpl": "626becf9582c3e319310b837",
+                            "parentId": "a17318e21e6eeb7d237967af",
+                            "slotId": "mod_tactical_003",
+                            "upd": {
+                                "Light": {
+                                    "IsActive": true,
+                                    "SelectedMode": 0
+                                }
+                            }
+                        },
+                        {
+                            "_id": "7164bbcf369c6048ec6990ca",
+                            "_tpl": "638612b607dfed1ccb7206ba",
+                            "parentId": "a1f89af831fd4cb62675c325",
+                            "slotId": "mod_muzzle"
+                        },
+                        {
+                            "_id": "f84cc8421c58e1f08ec2e077",
+                            "_tpl": "588226d124597767ad33f787",
+                            "parentId": "46c0502d171f4f4bf3dc7a4d",
+                            "slotId": "mod_foregrip"
+                        },
+                        {
+                            "_id": "0753b497ccf0ca12447773f6",
+                            "_tpl": "58d2912286f7744e27117493",
+                            "parentId": "a1c6be0ee0065d0a42443e05",
+                            "slotId": "mod_stock"
+                        }
+                    ]
+                }
+            ],
+            "normal": [
+                {
+                    //原版预设
+                    "$type": "VanillaPreset",
+                    //标识字段
+                    "name": "M4A1标准",
+                    //物品ID
+                    "item": "5447a9cd4bdc2dbd208b4567"
+                },
+                {
+                    "$type": "VanillaPreset",
+                    "name": "MMAC",
+                    "item": "61bc85697113f767765c7fe7"
+                },
+                {
+                    "$type": "Item",
+                    "name": "BTC",
+                    "itemid": "59faff1d86f7746c51718c9c",
+                    "stackcount": 1
+                },
+                {
+                    "$type": "Item",
+                    "name": "M995",
+                    "itemid": "59e690b686f7746c9f75e848",
+                    "stackcount": 60
+                },
+                {
+                    "$type": "Item",
+                    "name": "盒装M995",
+                    "itemid": "6570265f1419851aef03e739",
+                    "stackcount": 1
+                }
+            ]
+        },
+        "normal": {
+            "chanceup": [
+                {
+                    "$type": "Item",
+                    "name": "白卡",
+                    "itemid": "5c94bbff86f7747ee735c08f",
+                    "stackcount": 1
+                }
+            ],
+            "normal": [
+                {
+                    "$type": "Item",
+                    "name": "金蛋",
+                    "itemid": "62a09cfe4f842e1bd12da3e4",
+                    "stackcount": 1
+                },
+                {
+                    "$type": "Item",
+                    "name": "银徽章",
+                    "itemid": "5bc9bdb8d4351e003562b8a1",
+                    "stackcount": 1
+                },
+                {
+                    "$type": "Item",
+                    "name": "蛇链",
+                    "itemid": "5c1267ee86f77416ec610f72",
+                    "stackcount": 1
+                },
+                {
+                    "$type": "Item",
+                    "name": "狮雕",
+                    "itemid": "59e3639286f7741777737013",
+                    "stackcount": 1
+                },
+                {
+                    "$type": "Item",
+                    "name": "管道扳手",
+                    "itemid": "619cbfccbedcde2f5b3f7bdd",
+                    "stackcount": 1
+                }
+            ]
+        }
+    }
+}

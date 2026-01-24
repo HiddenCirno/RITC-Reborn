@@ -1,0 +1,47 @@
+{
+  //物品id
+  "_id": "示例物品1",
+  //复制的物品模板目标
+  "_targetid": "5e2aedd986f7746d404f3aa4",
+  "_name": "示例物品1",
+  //原版物品参数, 具体定义自己参考原版寻思吧
+  //这个世界上除了尼基塔没人能解释清楚所有参数的含义
+  "_props": {
+    "Weight": 0.05,
+    "BackgroundColor": "default",
+    "StackMaxSize": 1,
+    "Prefab": {
+      "path": "grassblock.pack",
+      "rcid": ""
+    }
+  },
+  //自定义物品参数
+  "_customprops": {
+    //自定义物品类型, 这里是战利品类型
+    //通常是大部分普通物品的类型, 允许在战局内发现, 允许自动修复
+    "$type": "lootable",
+    //物品名, 短名, 介绍, 必填
+    "Name": "草方块",
+    "ShortName": "草方块",
+    "Description": "独立物品范例。",
+    //基准价格, 也就是手册价格
+    "DefaultPrice": 320000,
+    //跳蚤市场价格, 不存在时自动fallback到基准价格
+    "RagfairPrice": 640000,
+    //跳蚤市场/手册分类标签, 必填
+    "RagfairType": "5b47574386f77428ca22b2f1",
+    //是否能在战局里找到
+    "CanFindInRaid": true,
+    //是否使用自定义战利品数据
+    "CustomLoot": false,
+    //是否视为自定义货币处理
+    "isMoney": false,
+    //是否添加到3x4任务(即收藏家的需求)
+    "addToKappa": true,
+    //自动修复类型
+    "FixType": [
+      //Mods表示对槽位进行修复, 适用于荣誉展柜需要摆放的物品, 特殊装备, 配件, 耳机等
+      "Mods"
+    ]
+  }
+}

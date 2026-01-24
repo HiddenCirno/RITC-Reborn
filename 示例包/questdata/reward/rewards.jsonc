@@ -1,0 +1,70 @@
+[
+    //任务奖励大文件
+    //这里其实可以存放多个文件, 以提高区分度和结构可读性
+    {
+        //商人解锁奖励
+        "$type": "trader",
+        "ID": "示例任务3商人解锁奖励1",
+        //解锁的商人ID
+        "Trader": "ExampleTrader2",
+        "Quest": "示例任务3",
+        "Stage": 1,
+        "Hidden": false,
+        "Unknown": false,
+        "IsAchievement": false
+    },
+    {
+        //物品奖励
+        "$type": "item",
+        "ID": "示例任务3物品奖励1",
+        //物品内容
+        "Items": [
+            {
+                "_id": "示例任务3物品奖励1物品",
+                "_tpl": "5449016a4bdc2d6f028b456f",
+                "upd": {
+                    "StackObjectsCount": 20000
+                }
+            }
+        ],
+        //是否带勾
+        "FindInRaid": false,
+        "Quest": "示例任务3",
+        "Stage": 1,
+        "Hidden": false,
+        "Unknown": false,
+        "IsAchievement": false,
+        //物品堆叠(显示的奖励的堆叠, 和实际物品的堆叠可以不同步)
+        "Count": 20000
+    },
+    {
+        //技能奖励
+        "$type": "skillexperience",
+        "ID": "示例任务4技能奖励1",
+        "Quest": "示例任务4",
+        "Stage": 1,
+        "Hidden": false,
+        "Unknown": false,
+        "IsAchievement": false,
+        //限定游戏版本的奖励, 通常只有黑边蓝边区分, 位运算
+        //124分别为123级白边(Standard/Left behind/Prepare to Escape), 8黑边16蓝边32dev64从零开始128从零开始live版256和512不明
+        //1007即1+2+4+8+32+64+128+256+512, 也就是除了蓝边之外的版本
+        "AvailableGameEdition": 1007,
+        //技能
+        "Skill": "CovertMovement",
+        //等级
+        "Count": 3
+    },
+    {
+        //成就奖励
+        "$type": "achievement",
+        //成就ID
+        "Target": "示例成就1",
+        "Quest": "示例任务4",
+        "Stage": 1,
+        "Hidden": false,
+        "Unknown": false,
+        "IsAchievement": false,
+        "ID": "示例任务4_成就奖励"
+    }
+]

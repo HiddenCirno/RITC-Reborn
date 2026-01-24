@@ -1,0 +1,34 @@
+{
+    //全局本地化数据
+    //也就是传统的key-value格式, 可以对原版文本进行覆盖
+    //支持多语言
+    "示例商人2保险激活文本1": "保险业务激活成功，别担心，你的东西会回来的。",
+    "示例商人2保险寻回文本1": "你的保险生效了，来看看有没有缺什么。",
+    "示例商人2保险失败文本1": "好吧，看来有人抢先了一步……",
+    "示例商人2保险实验室失败文本1": "实验室？你怎么把东西丢在那地方了？你没有阅读用户手册吗？",
+    "示例商人2保险过期文本1": "你的东西？我可不是做慈善的，那已经不是你的东西了。",
+    "示例商人2保险完成文本1": "理论上这条信息永远也不会触发，如果你看到这个，说明你的游戏出了些问题。",
+    //覆盖示例
+    "54cb50c76803fa8b248b4571 Nickname": "毛商",
+    //以下字段已经废弃
+    "616041eb031af660100c9967 startedMessageText ExampleTrader 0": "",
+    "616041eb031af660100c9967 failMessageText ExampleTrader 0": "我怎么记得日常任务失败是不会发消息的来着？可能要留空。",
+    "616041eb031af660100c9967 successMessageText ExampleTrader 0": "日常任务完成。",
+    "616041eb031af660100c9967 description ExampleTrader 0": "日常任务激活，类型：安全撤离",
+    "616041eb031af660100c9967 changeQuestMessageText ExampleTrader 0": "你确定要更换日常任务吗？",
+    "61604635c725987e815b1a46 startedMessageText ExampleTrader 0": "",
+    "61604635c725987e815b1a46 failMessageText ExampleTrader 0": "",
+    "61604635c725987e815b1a46 successMessageText ExampleTrader 0": "日常任务完成。",
+    "61604635c725987e815b1a46 description ExampleTrader 0": "日常任务激活，类型：寻物上交",
+    "61604635c725987e815b1a46 changeQuestMessageText ExampleTrader 0": "你确定要更换日常任务吗？",
+    "616052ea3054fc0e2c24ce6e startedMessageText ExampleTrader 0": "",
+    "616052ea3054fc0e2c24ce6e failMessageText ExampleTrader 0": "",
+    "616052ea3054fc0e2c24ce6e successMessageText ExampleTrader 0": "日常任务完成。",
+    "616052ea3054fc0e2c24ce6e description ExampleTrader 0": "日常任务激活，类型：强制抹除",
+    "616052ea3054fc0e2c24ce6e changeQuestMessageText ExampleTrader 0": "你确定要更换日常任务吗？",
+    "测试自定义每日任务 startedMessageText ExampleTrader 0": "",
+    "测试自定义每日任务 failMessageText ExampleTrader 0": "",
+    "测试自定义每日任务 successMessageText ExampleTrader 0": "测试自定义每日任务完成。",
+    "测试自定义每日任务 description ExampleTrader 0": "测试自定义每日任务激活，类型：寻物上交",
+    "测试自定义每日任务 changeQuestMessageText ExampleTrader 0": "请勿更换测试自定义每日任务"
+}

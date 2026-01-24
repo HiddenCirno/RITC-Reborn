@@ -1,0 +1,32 @@
+{
+        "_id": "示例针包",
+        "_targetid": "619cbf7d23893217ec30b689",
+        "_name": "示例针包",
+        "_props": {
+            "Weight": 0,
+            "BackgroundColor": "red",
+            "Width": 1,
+            "Height": 1
+        },
+        "_customprops": {
+            //容器类型
+            "$type": "container",
+            "Name": "示例针包",
+            "ShortName": "针包",
+            "Description": "独立物品范例。",
+            "RagfairType": "5b5f6fa186f77409407a7eb7",
+            "DefaultPrice": 600000,
+            "CanFindInRaid": false,
+            "CustomLoot": false,
+            "CustomLootTarget": "59faff1d86f7746c51718c9c",
+            "isMoney": false,
+            "BlackListType": 63,
+            //容器定义, 分别对应宽和高
+            //仅限单空间容器, 多空间容器复杂定义纯服务端无法实现
+            "ContainerSizeWidth": 6,
+            "ContainerSizeHeight": 6,
+            "FixType": [
+                "Container"
+            ]
+        }
+    }

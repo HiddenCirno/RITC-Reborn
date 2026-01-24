@@ -1,0 +1,57 @@
+{
+    //物品id
+    "_id": "示例针剂1",
+    //复制的物品模板目标
+    "_targetid": "5c0e531d86f7747fa23f4d42",
+    "_name": "示例针剂1",
+    //原版物品参数, 具体定义自己参考原版寻思吧
+    //这个世界上除了尼基塔没人能解释清楚所有参数的含义
+    "_props": {
+        //buff组命名, 不可重复
+        "StimulatorBuffs": "BuffsTestSyringe"
+    },
+    //自定义物品参数
+    "_customprops": {
+        //自定义物品类型, 这里是buff物品类型
+        //通常是注射器
+        "$type": "buff",
+        //物品名, 短名, 介绍, 必填
+        "Name": "示例针剂",
+        "ShortName": "示例针剂",
+        "Description": "独立物品范例。",
+        //基准价格, 也就是手册价格
+        "DefaultPrice": 10000,
+        //跳蚤市场/手册分类标签, 必填
+        "RagfairType": "5b47574386f77428ca22b33a",
+        //是否能在战局里找到
+        "CanFindInRaid": false,
+        //是否使用自定义战利品数据
+        "CustomLoot": false,
+        //是否视为自定义货币处理
+        "isMoney": false,
+        //黑名单类型, 使用位运算实现, 0表示none, 1表示空投, 2表示PMC, 4表示Scav宝箱, 8表示黑商, 16表示邪教圈, 32表示日常任务奖励, 64表示全局黑名单
+        //此处为2
+        "BlackListType": 2,
+        //Buff组数据, 和原版定义相同
+        "BuffValue": [
+            {
+                "BuffType": "HydrationRate",
+                "Chance": 1,
+                "Delay": 1,
+                "Duration": 120,
+                "Value": 10,
+                "AbsoluteValue": true,
+                "SkillName": ""
+            },
+            {
+                "BuffType": "EnergyRate",
+                "Chance": 1,
+                "Delay": 1,
+                "Duration": 120,
+                "Value": 10,
+                "AbsoluteValue": true,
+                "SkillName": ""
+            }
+        ]
+    }
+}

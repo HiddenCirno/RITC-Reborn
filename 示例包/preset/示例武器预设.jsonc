@@ -1,0 +1,91 @@
+{
+    //武器预设文件
+    //护甲的格式是相同的
+    "Name": "示例武器_基础预设",
+    //预设名字
+    "PresetName": "Default",
+    //是否为基础预设
+    "IsBasePreset": true,
+    //是否显示预设名称
+    "ChangePresetName": false,
+    //是否可以在战局里生成
+    "SpawnInRaid": false,
+    //生成共享目标
+    "SpawnTarget": "5aafa857e5b5b00018480968",
+    //预设内容
+    "Preset": [
+        {
+            "_id": "6974bd5d07fc976cb875d3ba",
+            "_tpl": "1b08e90862fa824d853fd76d",
+            "upd": {
+                "Repairable": {
+                    "Durability": 100,
+                    "MaxDurability": 100
+                },
+                "FireMode": {
+                    "FireMode": "single"
+                }
+            }
+        },
+        {
+            "_id": "6974bd5d07fc976cb875d3bb",
+            "_tpl": "5aaf8a0be5b5b00015693243",
+            "parentId": "6974bd5d07fc976cb875d3ba",
+            "slotId": "mod_magazine"
+        },
+        {
+            "_id": "6974bd5d07fc976cb875d3bc",
+            "_tpl": "5aaf8e43e5b5b00015693246",
+            "parentId": "6974bd5d07fc976cb875d3ba",
+            "slotId": "mod_stock"
+        },
+        {
+            "_id": "6974bd5d07fc976cb875d3bd",
+            "_tpl": "5aaf9d53e5b5b00015042a52",
+            "parentId": "6974bd5d07fc976cb875d3ba",
+            "slotId": "mod_barrel"
+        },
+        {
+            "_id": "6974bd5d07fc976cb875d3be",
+            "_tpl": "5abcbb20d8ce87001773e258",
+            "parentId": "6974bd5d07fc976cb875d3ba",
+            "slotId": "mod_sight_rear",
+            "upd": {
+                "Sight": {
+                    "ScopesCurrentCalibPointIndexes": [
+                        0
+                    ],
+                    "ScopesSelectedModes": [
+                        0
+                    ],
+                    "SelectedScope": 0,
+                    "ScopeZoomValue": 0
+                }
+            }
+        },
+        {
+            "_id": "6974bd5d07fc976cb875d3bf",
+            "_tpl": "5ab3afb2d8ce87001660304d",
+            "parentId": "6974bd5d07fc976cb875d3bd",
+            "slotId": "mod_muzzle"
+        },
+        {
+            "_id": "6974bd5d07fc976cb875d3c0",
+            "_tpl": "5addba3e5acfc4001669f0ab",
+            "parentId": "6974bd5d07fc976cb875d3bf",
+            "slotId": "mod_sight_front",
+            "upd": {
+                "Sight": {
+                    "ScopesCurrentCalibPointIndexes": [
+                        0
+                    ],
+                    "ScopesSelectedModes": [
+                        0
+                    ],
+                    "SelectedScope": 0,
+                    "ScopeZoomValue": 0
+                }
+            }
+        }
+    ]
+}

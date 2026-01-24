@@ -1,0 +1,20 @@
+{
+    //任务逻辑树合并文件
+    //参考logic文件夹里的内容
+    "示例任务3": {
+        "id": "示例任务3",
+        "prequestdata": {},
+        "pretraderstanding": {},
+        "pretraderlevel": {
+            "54cb50c76803fa8b248b4571": 2
+        },
+        "prelevel": 0
+    },
+    "示例任务4": {
+        "id": "示例任务4",
+        "prequestdata": {},
+        "pretraderstanding": {},
+        "pretraderlevel": {},
+        "prelevel": 0
+    }
+}

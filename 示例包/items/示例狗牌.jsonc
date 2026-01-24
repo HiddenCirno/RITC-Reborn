@@ -1,0 +1,44 @@
+{
+        "_id": "示例狗牌",
+        "_targetid": "59f32c3b86f77472a31742f0",
+        "_name": "示例狗牌",
+        "_props": {
+            "BackgroundColor": "red"
+        },
+        "_customprops": {
+            //修复物品类, 表示自动兼容
+            //buff, 武器和容器会自动继承这个类型, 也就是自带兼容属性, 填写兼容即可自动适配
+            "$type": "fixed",
+            "Name": "示例狗牌",
+            "ShortName": "示例",
+            "Description": "独立物品范例。",
+            //狗牌的价值比较特殊, 它由等级x基础价值得到, 所以请不要把基础价值填的太高
+            "DefaultPrice": 400,
+            "RagfairType": "5b47574386f77428ca22b2f4",
+            "CanFindInRaid": false,
+            "CustomLoot": false,
+            "CustomLootTarget": "59faff1d86f7746c51718c9c",
+            "isMoney": false,
+            "BlackListType": 63,
+            "FixType": [
+                //容器
+                "Container",
+                //槽位
+                "Mods",
+                //上交物品组, 即上交多个类型的物品且包含原物品的任务条件
+                "HandoverItemGroup"
+            ],
+            //复制价格, 这个参数会让独立物品和原物品价值相同
+            "CopyPrice": true,
+            //允许狗牌样式在PMC身上生成
+            "ApplyAsPMCDogTag": true,
+            //允许作为Usec狗牌样式生成
+            "ApplyToUSEC": true,
+            //允许作为Bear狗牌样式生成
+            "ApplyToBEAR": true,
+            //白边/黑边/蓝边
+            "ApplyToStandard": false,
+            "ApplyToEOD": false,
+            "ApplyToUnheard": true
+        }
+    }

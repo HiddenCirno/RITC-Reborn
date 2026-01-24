@@ -1,0 +1,27 @@
+[
+    //报价单合并文件
+    //多文件演示
+    {
+        "$type": "normal",
+        "ID": "报价单范例7",
+        "Trader": "ExampleTrader2",
+        "Item": [
+            {
+                "_id": "报价单范例7",
+                "_tpl": "示例礼盒",
+                "parentId": "hideout",
+                "slotId": "hideout",
+                "upd": {
+                    "StackObjectsCount": 999999,
+                    "UnlimitedCount": true
+                }
+            }
+        ],
+        "DogTag": {},
+        "Barter": {
+            "5449016a4bdc2d6f028b456f": 100
+        },
+        "TrustLevel": 1,
+        "isWeapon": false
+    }
+]

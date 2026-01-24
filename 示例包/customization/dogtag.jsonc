@@ -1,0 +1,22 @@
+{
+    "示例狗牌样式": {
+        "_id": "示例狗牌样式",
+        "_name": "示例狗牌样式",
+        "_parent": "6746fafabafff8500804880e",
+        "_type": "Item",
+        "_props": {
+            "AvailableAsDefault": false,
+            "Name": "示例狗牌",
+            "EName": "示例狗牌",
+            "ShortName": "示例狗牌",
+            "Description": "示例狗牌",
+            "ProfileVersions": [],
+            "Side": [
+                "Bear",
+                "Usec"
+            ],
+            "BearTemplateId": "示例狗牌",
+            "UsecTemplateId": "示例狗牌"
+        }
+    }
+}

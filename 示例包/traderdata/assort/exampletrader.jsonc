@@ -1,0 +1,377 @@
+[
+    //报价单合并文件
+    {
+        //普通报价单(和锁定区分)
+        "$type": "normal",
+        //ID(需要和主物品的ID一致)
+        "ID": "报价单范例1",
+        //报价单所属的商人
+        "Trader": "ExampleTrader",
+        //物品内容
+        "Item": [
+            {
+                //主物品(parentId和slotId为hideout, 一个报价单只能有一个主物品)
+                //主物品的识别ID, 全局唯一不可重复
+                "_id": "报价单范例1",
+                //主物品的物品ID(具体的物品)
+                "_tpl": "示例物品1",
+                //parentId和slotId, 此处用于标识主物品和构建树结构
+                "parentId": "hideout",
+                "slotId": "hideout",
+                //upd, 存储报价单的部分数据
+                "upd": {
+                    //最大购买数量
+                    "BuyRestrictionMax": 1,
+                    //已购买数量, 无用, 仅做保留, 填0即可
+                    "BuyRestrictionCurrent": 0,
+                    //商人处一次补货的物品数量
+                    "StackObjectsCount": 999999,
+                    //不显示具体存货数量(即显示为"大量")
+                    "UnlimitedCount": true
+                }
+            }
+        ],
+        //交易部分
+        //狗牌需求, 此处留空, 见下
+        "DogTag": {},
+        //物品需求, KvP(Key-Value-Pair结构, 物品id: 数量)
+        "Barter": {
+            //物品id后面跟数量
+            "590a373286f774287540368b": 1,
+            "5d0376a486f7747d8050965c": 1
+        },
+        //需要的信任度等级
+        "TrustLevel": 1,
+        //是否为武器, 此参数已失去作用, 仅做保留
+        "isWeapon": false
+    },
+    {
+        "$type": "normal",
+        "ID": "报价单范例2",
+        "Trader": "ExampleTrader",
+        "Item": [
+            {
+                "_id": "报价单范例2",
+                "_tpl": "示例物品1",
+                "parentId": "hideout",
+                "slotId": "hideout",
+                "upd": {
+                    "BuyRestrictionMax": 1,
+                    "BuyRestrictionCurrent": 0,
+                    "StackObjectsCount": 999999,
+                    "UnlimitedCount": true
+                }
+            }
+        ],
+        //狗牌交易内容
+        //狗牌交易疑似是不识别物品ID的, 只依靠阵营和等级作区分, 物品ID仅做显示用
+        //这里使用默认的Bear和Usec狗牌
+        "DogTag": {
+            //狗牌id对应的数据
+            "59f32c3b86f77472a31742f0": {
+                //数量
+                "count": 1,
+                //等级
+                "level": 20,
+                //阵营
+                "side": "Usec"
+            },
+            "59f32bb586f774757e1e8442": {
+                "count": 1,
+                "level": 20,
+                "side": "Bear"
+            }
+        },
+        "Barter": {},
+        "TrustLevel": 1
+    },
+    {
+        //锁定的报价单, 需要完成任务解锁
+        "$type": "locked",
+        "ID": "报价单范例3",
+        "Trader": "ExampleTrader",
+        "Item": [
+            {
+                "_id": "报价单范例3",
+                "_tpl": "示例物品1",
+                "parentId": "hideout",
+                "slotId": "hideout",
+                "upd": {
+                    "BuyRestrictionMax": 1,
+                    "BuyRestrictionCurrent": 0,
+                    "StackObjectsCount": 999999,
+                    "UnlimitedCount": true
+                }
+            }
+        ],
+        "DogTag": {
+            "59f32bb586f774757e1e8442": {
+                "count": 1,
+                "level": 20,
+                "side": "Any"
+            }
+        },
+        "Barter": {},
+        "TrustLevel": 1,
+        "isWeapon": false,
+        //是否锁定
+        "Locked": true,
+        //任务ID
+        //报价单并不支持成就解锁
+        "Quest": "示例任务1",
+        //任务状态, 0开始1完成2失败
+        "QuestStage": 1,
+        //是否为未知奖励
+        "Unknown": false
+    },
+    {
+        "$type": "normal",
+        "ID": "报价单范例4",
+        "Trader": "ExampleTrader",
+        "Item": [
+            {
+                "_id": "报价单范例4",
+                "_tpl": "示例物品1",
+                "parentId": "hideout",
+                "slotId": "hideout",
+                "upd": {
+                    "BuyRestrictionMax": 100,
+                    "BuyRestrictionCurrent": 0,
+                    "StackObjectsCount": 999999,
+                    "UnlimitedCount": true
+                }
+            }
+        ],
+        "DogTag": {},
+        "Barter": {
+            "示例货币": 100
+        },
+        "TrustLevel": 1,
+        "isWeapon": false
+    },
+    {
+        "$type": "normal",
+        "ID": "报价单范例5",
+        "Trader": "ExampleTrader",
+        "Item": [
+            {
+                "_id": "报价单范例5",
+                "_tpl": "示例货币",
+                "parentId": "hideout",
+                "slotId": "hideout",
+                "upd": {
+                    "StackObjectsCount": 999999,
+                    "UnlimitedCount": true
+                }
+            }
+        ],
+        "DogTag": {},
+        "Barter": {
+            "5449016a4bdc2d6f028b456f": 100
+        },
+        "TrustLevel": 1,
+        "isWeapon": false
+    },
+    {
+        "$type": "normal",
+        "ID": "报价单范例6",
+        "Trader": "ExampleTrader2",
+        "Item": [
+            //复杂物品, 通常是武器, 树状结构, 除upd外和原版内容一致
+            {
+                "_id": "报价单范例6",
+                "_tpl": "5c07c60e0db834002330051f",
+                "parentId": "hideout",
+                "slotId": "hideout",
+                "upd": {
+                    //武器专有参数, 开火模式
+                    "FireMode": {
+                        "FireMode": "single"
+                    },
+                    "BuyRestrictionMax": 1,
+                    "BuyRestrictionCurrent": 0,
+                    "StackObjectsCount": 999999,
+                    "UnlimitedCount": true
+                }
+            },
+            {
+                "_id": "f99fd4e4792190af8264e040",
+                "_tpl": "55802f5d4bdc2dac148b458f",
+                //子物品的树结构关系, parentId指向父物品的_id, slotId指向槽位id
+                "parentId": "报价单范例6",
+                "slotId": "mod_pistol_grip"
+            },
+            {
+                "_id": "54aeb81d4fc58408af288f66",
+                "_tpl": "55802d5f4bdc2dac148b458e",
+                "parentId": "报价单范例6",
+                "slotId": "mod_magazine"
+            },
+            {
+                "_id": "e119dc184c5c6f862255eda3",
+                "_tpl": "63f5ed14534b2c3d5479a677",
+                "parentId": "报价单范例6",
+                "slotId": "mod_reciever"
+            },
+            {
+                "_id": "eae2acd79148c665c95af0e0",
+                "_tpl": "5c793fb92e221644f31bfb64",
+                "parentId": "报价单范例6",
+                "slotId": "mod_stock"
+            },
+            {
+                "_id": "300cc34f501dae2e31cf7570",
+                "_tpl": "5d44334ba4b9362b346d1948",
+                "parentId": "报价单范例6",
+                "slotId": "mod_charge"
+            },
+            {
+                "_id": "1e811988684993b2b6dc0697",
+                "_tpl": "618b9643526131765025ab35",
+                "parentId": "e119dc184c5c6f862255eda3",
+                "slotId": "mod_scope"
+            },
+            {
+                "_id": "dab13a884ac5c221ff1df307",
+                "_tpl": "63d3d44a2a49307baf09386d",
+                "parentId": "e119dc184c5c6f862255eda3",
+                "slotId": "mod_barrel"
+            },
+            {
+                "_id": "a17318e21e6eeb7d237967af",
+                "_tpl": "5c78f2492e221600114c9f04",
+                "parentId": "e119dc184c5c6f862255eda3",
+                "slotId": "mod_handguard"
+            },
+            {
+                "_id": "eda3047b0819038a681f4e96",
+                "_tpl": "5bc09a18d4351e003562b68e",
+                "parentId": "e119dc184c5c6f862255eda3",
+                "slotId": "mod_sight_rear",
+                "upd": {
+                    "Sight": {
+                        "ScopesCurrentCalibPointIndexes": [
+                            0
+                        ],
+                        "ScopesSelectedModes": [
+                            0
+                        ],
+                        "SelectedScope": 0
+                    }
+                }
+            },
+            {
+                "_id": "a1c6be0ee0065d0a42443e05",
+                "_tpl": "56eabf3bd2720b75698b4569",
+                "parentId": "eae2acd79148c665c95af0e0",
+                "slotId": "mod_stock_000"
+            },
+            {
+                "_id": "6117657b1a7870e59c21b2b2",
+                "_tpl": "5b3b99475acfc432ff4dcbee",
+                "parentId": "1e811988684993b2b6dc0697",
+                "slotId": "mod_scope",
+                "upd": {
+                    "Sight": {
+                        "ScopesCurrentCalibPointIndexes": [
+                            0
+                        ],
+                        "ScopesSelectedModes": [
+                            0
+                        ],
+                        "SelectedScope": 0
+                    }
+                }
+            },
+            {
+                "_id": "67a587a8fbe9193defa1437c",
+                "_tpl": "618b9671d14d6d5ab879c5ea",
+                "parentId": "1e811988684993b2b6dc0697",
+                "slotId": "mod_mount"
+            },
+            {
+                "_id": "a1f89af831fd4cb62675c325",
+                "_tpl": "6386120cd6baa055ad1e201c",
+                "parentId": "dab13a884ac5c221ff1df307",
+                "slotId": "mod_muzzle"
+            },
+            {
+                "_id": "514e439d8c790de76c66f597",
+                "_tpl": "63d3ce281fe77d0f2801859e",
+                "parentId": "dab13a884ac5c221ff1df307",
+                "slotId": "mod_gas_block"
+            },
+            {
+                "_id": "e3d30be4ac03b2c879b9e92e",
+                "_tpl": "6269220d70b6c02e665f2635",
+                "parentId": "a17318e21e6eeb7d237967af",
+                "slotId": "mod_mount_000"
+            },
+            {
+                "_id": "4f8a5b9f488ce62b91ae82d1",
+                "_tpl": "6269220d70b6c02e665f2635",
+                "parentId": "a17318e21e6eeb7d237967af",
+                "slotId": "mod_mount_001"
+            },
+            {
+                "_id": "46c0502d171f4f4bf3dc7a4d",
+                "_tpl": "5b7be4895acfc400170e2dd5",
+                "parentId": "a17318e21e6eeb7d237967af",
+                "slotId": "mod_foregrip"
+            },
+            {
+                "_id": "0d4ba70a3d9a55e7d0b7806d",
+                "_tpl": "5bc09a30d4351e00367fb7c8",
+                "parentId": "a17318e21e6eeb7d237967af",
+                "slotId": "mod_sight_front",
+                "upd": {
+                    "Sight": {
+                        "ScopesCurrentCalibPointIndexes": [
+                            0
+                        ],
+                        "ScopesSelectedModes": [
+                            0
+                        ],
+                        "SelectedScope": 0
+                    }
+                }
+            },
+            {
+                "_id": "d7c9b7dab618a4a0264dbb60",
+                "_tpl": "626becf9582c3e319310b837",
+                "parentId": "a17318e21e6eeb7d237967af",
+                "slotId": "mod_tactical_003",
+                "upd": {
+                    "Light": {
+                        "IsActive": true,
+                        "SelectedMode": 0
+                    }
+                }
+            },
+            {
+                "_id": "7164bbcf369c6048ec6990ca",
+                "_tpl": "638612b607dfed1ccb7206ba",
+                "parentId": "a1f89af831fd4cb62675c325",
+                "slotId": "mod_muzzle"
+            },
+            {
+                "_id": "f84cc8421c58e1f08ec2e077",
+                "_tpl": "588226d124597767ad33f787",
+                "parentId": "46c0502d171f4f4bf3dc7a4d",
+                "slotId": "mod_foregrip"
+            },
+            {
+                "_id": "0753b497ccf0ca12447773f6",
+                "_tpl": "58d2912286f7744e27117493",
+                "parentId": "a1c6be0ee0065d0a42443e05",
+                "slotId": "mod_stock"
+            }
+        ],
+        "DogTag": {},
+        "Barter": {
+            "5449016a4bdc2d6f028b456f": 100
+        },
+        "TrustLevel": 1,
+        "isWeapon": true
+    }
+]

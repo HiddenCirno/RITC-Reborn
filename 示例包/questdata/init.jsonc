@@ -1,0 +1,142 @@
+{
+    //同时支持全部加载和单文件加载
+    //这里是单文件加载所有任务
+    "示例任务3": {
+        "ID": "示例任务3",
+        "Type": 3,
+        "ImagePath": "/files/quest/icon/illust_76542723_20190926_114401.jpg",
+        "TraderID": "ExampleTrader",
+        "Location": "any",
+        "Restartable": false,
+        "QuestData": {
+            "Finish": [
+                {
+                    //踩点需求
+                    "$type": "visit",
+                    //id
+                    "id": "示例任务3踩点需求1",
+                    //是否要求单局完成
+                    "oneraid": false,
+                    //次数
+                    "count": 1,
+                    //counterid
+                    "counterid": "示例任务3踩点需求1_计数器",
+                    //踩点的位置的zoneid, 目前不支持自定义, 清自行查阅原版
+                    "zoneid": "place_pacemaker_SCOUT_01",
+                    //conditionid
+                    //这两个id的定义很难讲清楚, 推荐按照范例来, 即_计数器和_计数器_需求
+                    "conditionid": "示例任务3踩点需求1_计数器_需求"
+                },
+                {
+                    //撤离需求
+                    "$type": "exit",
+                    //id
+                    "id": "示例任务3撤离需求1",
+                    //是否要求单局完成
+                    "oneraid": false,
+                    //次数
+                    "count": 1,
+                    //指定地图, 依然使用位运算
+                    //1海关, 2森林, 4白天工厂, 8夜间工厂, 16实验室, 32海岸线, 64储备站, 128立交桥, 256灯塔, 512街区, 1024中心区, 2048高级中心区, 4096迷宫
+                    "location": 32,
+                    //撤离状态, 位运算
+                    //1幸存, 2匆匆逃离, 4阵亡, 8行动中失踪, 16中途离开, 32转移
+                    //35即32+2+1
+                    "status": 35,
+                    //是否指定撤离点
+                    "chooseexitpoint": false,
+                    //撤离点id, 不指定留空即可
+                    "exitpoint": ""
+                },
+                {
+                    //撤离需求
+                    "$type": "exit",
+                    //id
+                    "id": "示例任务3撤离需求2",
+                    //是否要求单局完成
+                    "oneraid": false,
+                    //次数
+                    "count": 1,
+                    //指定地图, 依然使用位运算
+                    //1海关, 2森林, 4白天工厂, 8夜间工厂, 16实验室, 32海岸线, 64储备站, 128立交桥, 256灯塔, 512街区, 1024中心区, 2048高级中心区, 4096迷宫
+                    "location": 32,
+                    //撤离状态, 位运算
+                    //1幸存, 2匆匆逃离, 4阵亡, 8行动中失踪, 16中途离开, 32转移
+                    //3即2+1
+                    "status": 3,
+                    //是否指定撤离点
+                    "chooseexitpoint": true,
+                    //撤离点id, 不指定留空即可
+                    "exitpoint": "Road to Customs"
+                }
+            ],
+            "Failed": []
+        },
+        "QuestReward": []
+    },
+    "示例任务4": {
+        "ID": "示例任务4",
+        "Type": 3,
+        "ImagePath": "/files/quest/icon/105182833_p0.png",
+        "TraderID": "ExampleTrader2",
+        "Location": "5704e3c2d2720bac5b8b4567",
+        "Restartable": true,
+        "QuestData": {
+            "Finish": [
+                {
+                    //等级需求
+                    "$type": "level",
+                    "id": "示例任务4等级需求1",
+                    "count": 75
+                },
+                {
+                    //安放物品需求
+                    "$type": "place",
+                    "id": "示例任务4安放需求1",
+                    //安放时间
+                    "time": 5,
+                    //物品id
+                    "itemid": "5c94bbff86f7747ee735c08f",
+                    //安放物品的位置, zoneid
+                    "zoneid": "place_skier_12_3",
+                    //需求数量
+                    "count": 1
+                },
+                {
+                    //技能等级需求
+                    "$type": "skill",
+                    "id": "示例任务4技能需求1",
+                    //技能
+                    "skill": "Perception",
+                    //等级
+                    "count": 15
+                }
+            ],
+            "Failed": [
+                {
+                    //这里是死亡失败
+                    //撤离需求
+                    "$type": "exit",
+                    //id
+                    "id": "示例任务4失败条件1",
+                    //是否要求单局完成
+                    "oneraid": false,
+                    //次数
+                    "count": 1,
+                    //指定地图, 依然使用位运算
+                    //1海关, 2森林, 4白天工厂, 8夜间工厂, 16实验室, 32海岸线, 64储备站, 128立交桥, 256灯塔, 512街区, 1024中心区, 2048高级中心区, 4096迷宫
+                    "location": 2,
+                    //撤离状态, 位运算
+                    //1幸存, 2匆匆逃离, 4阵亡, 8行动中失踪, 16中途离开, 32转移
+                    //3即2+1
+                    "status": 28,
+                    //是否指定撤离点
+                    "chooseexitpoint": false,
+                    //撤离点id, 不指定留空即可
+                    "exitpoint": ""
+                }
+            ]
+        },
+        "QuestReward": []
+    }
+}
