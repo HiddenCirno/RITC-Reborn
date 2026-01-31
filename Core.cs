@@ -203,9 +203,11 @@ public class Core(
 
         //²»¶Ô
         //var modPath = mod.GetModPath();
-
+        //Console.WriteLine($"{modPath}");
+        var testpath = Path.Join(modPath, "bundles.json");
+        //Console.WriteLine($"{testpath}");
         var modBundles = await jsonUtil.DeserializeFromFileAsync<BundleManifest>(
-            Path.Join(modPath, "bundles.json")
+            testpath
         );
 
         var bundleManifests = modBundles?.Manifest ?? [];
