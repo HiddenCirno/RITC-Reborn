@@ -71,7 +71,7 @@ public record ModMetadata : AbstractModMetadata
     /// </summary>
     public override Dictionary<string, SemanticVersioning.Range>? ModDependencies { get; init; } = new()
 {
-    { "com.hiddenhiragi.vulcancore", new SemanticVersioning.Range(">=1.0.0") }
+    { "com.hiddenhiragi.vulcancore", new SemanticVersioning.Range(">=1.0.1") }
 };
 
     /// <summary>
