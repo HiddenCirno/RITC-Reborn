@@ -24,9 +24,10 @@
       <HintPath>I:\TKF\SPT\0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="火神之心-重生">
-      <HintPath>I:\TKF\SPT\user\mods\火神之心-重生\火神之心-重生.dll</HintPath>
+    <Reference Include="EternalCycleServer">
+      <HintPath>I:\TKF\SPT\user\mods\EternalCycleServer\EternalCycleServer.dll</HintPath>
       <Private>False</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
   </ItemGroup>
 </Project>
