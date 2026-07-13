@@ -127,7 +127,7 @@ namespace RITC
                     }
                 };
             }
-
+            //Utils.commonLogger.Success("妈的有病啊? 没见过后加载啊?");
             EventManager.OnAfterModLoadedEvent += (context) =>
             {
                 Utils.commonLogger.Info($"共加载了{PackagePath.Keys.Count}个拓展包");
@@ -158,6 +158,32 @@ namespace RITC
                 var version = package.Version;
                 var creator = $"<color=#B0E0E6>RITC拓展 - {name}</color>";
 
+                //捋一捋
+                //缺了兑换码, sloticon示例, 标靶示例, 装修示例, 弹挂布局示例
+                //诶呦, 遥遥无期哟
+                //得从隔壁火神重工扒拉点资源过来
+                //反正我把重复警告杀了
+                //那么我就得做自定义icon的slot, 一个弹挂甲(包含预设), 一把武器
+                //一套兑换码, 一个狗牌, 一个地板, 一个靶子
+                //还有各种示例实例
+                //比如新增的标签系统
+                //卡池
+                //乱七八糟
+                //仿制钥匙明天还得搓了
+                //当地时间07.11.2026 23:18
+                //明天开搞。
+                //next day...
+                //内置一下武器组标签, 扫手册
+                //然后把示例武器组写一下
+                //当地时间07.12.2026 18:12
+                //差装修, 标靶
+                //武器组
+                //衣服!!
+                //当地时间07.12.2026 22:18
+                //装修, 衣服, 应该没了
+                //都是不好搞定的
+                //我要让自己休息休息....压力好大
+
                 Utils.commonLogger.Info($"加载拓展包: {name}, 版本{version}");
                 PackagePath.TryAdd(pkgpath, package);
                 ItemUtils.RegisterItem(datapath, "items/", creator, author);
@@ -165,6 +191,8 @@ namespace RITC
                 ItemUtils.RegisterDrawPool(datapath, "drawpool.jsonc");
 
                 ItemTagUtils.RegisterItemTag(datapath, "itemtag.jsonc");
+                GiftCodeUtils.RegisterGiftCode(datapath, "giftcode.jsonc");
+                GiftCodeUtils.RegisterGiftCode(datapath, "giftcode/");
 
                 TraderUtils.RegisterTrader(datapath, "traderdata/trader/", "res/avatar/", creator, author);
                 AssortUtils.RegisterAssort(datapath, "traderdata/assort/");
@@ -182,6 +210,8 @@ namespace RITC
                 RecipeUtils.RegisterRecipe(datapath, "recipe/craft.jsonc");
                 RecipeUtils.RegisterScavCaseRecipe(datapath, "recipe/scavcase/");
                 RecipeUtils.RegisterScavCaseRecipe(datapath, "recipe/scavcase.jsonc");
+                RecipeUtils.RegisterCultistCircleRecipe(datapath, "recipe/circle/");
+                RecipeUtils.RegisterCultistCircleRecipe(datapath, "recipe/circle.jsonc");
 
                 PresetUtils.RegisterPreset(datapath, "preset/");
 
@@ -191,6 +221,9 @@ namespace RITC
                 LocaleUtils.RegisterQuestLocale(datapath, "locale/quest/", creator, author);
 
                 LocaleUtils.RegisterLocaleText(datapath, "locale/text/");
+
+                ResourceUtils.RegisterRigLayoutResource(datapath, "res/riglayout/");
+                ResourceUtils.RegisterSlotIconResource(datapath, "res/sloticon/");
 
             }
         }
