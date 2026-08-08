@@ -59,7 +59,7 @@ namespace RITC
         /// <summary>
         ///  The version of the mod, follows SEMVER rules (https://semver.org/)
         /// </summary>
-        public  SemanticVersioning.Version Version { get; init; } = new("1.1.0");
+        public  SemanticVersioning.Version Version { get; init; } = new("1.2.0");
 
         /// <summary>
         /// What version of SPT is your mod made for, follows SEMVER rules (https://semver.org/)
@@ -76,7 +76,7 @@ namespace RITC
         /// </summary>
         public  Dictionary<string, SemanticVersioning.Range>? ModDependencies { get; init; } = new()
 {
-    { "projectspark.hiddenhiragi.eternalcycleserver", new SemanticVersioning.Range(">=1.0.0") }
+    { "projectspark.hiddenhiragi.eternalcycleserver", new SemanticVersioning.Range(">=1.3.1") }
 };
 
         /// <summary>
@@ -219,6 +219,7 @@ namespace RITC
                 QuestUtils.RegisterQuest(datapath, "questdata/init.jsonc", "res/questimage/");
                 QuestUtils.RegisterQuestLogicTree(datapath, "questdata/logic/");
                 QuestUtils.RegisterQuestRewards(datapath, "questdata/reward/");
+                QuestZoneUtils.RegisterQuestZones(datapath, "questdata/zone/");
 
                 AchievementUtils.RegisterAchievement(datapath, "questdata/achievement/", "res/achievement/");
                 AchievementUtils.RegisterAchievement(datapath, "questdata/achievement.jsonc", "res/achievement/");
