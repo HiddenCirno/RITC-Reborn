@@ -1,0 +1,3318 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+Properties/
+  launchSettings.json
+示例包/
+  bundles/
+    grassblock.pack
+    string
+  customization/
+    dogtag.jsonc
+  items/
+    示例任务物品.jsonc
+    示例固定礼盒.jsonc
+    示例武器1.jsonc
+    示例物品1.jsonc
+    示例狗牌.jsonc
+    示例礼盒.jsonc
+    示例货币.jsonc
+    示例针剂1.jsonc
+    示例针包.jsonc
+    示例高级礼盒.jsonc
+  locale/
+    quest/
+      ch.jsonc
+    text/
+      ch.jsonc
+  pool/
+    示例高级礼盒.jsonc
+  preset/
+    示例武器预设.jsonc
+  questdata/
+    achievement/
+      示例成就2.jsonc
+    init/
+      示例任务1.jsonc
+      示例任务2.jsonc
+    logic/
+      示例任务2.jsonc
+    reward/
+      rewards.jsonc
+    achievement.jsonc
+    init.jsonc
+    logic.jsonc
+  recipe/
+    craft/
+      示例配方1.jsonc
+    craft.jsonc
+    scavcase.jsonc
+  res/
+    avatar/
+      ExampleTrader.jpg
+      ExampleTrader2.jpg
+    icon/
+      example1.png
+      example2.png
+    image/
+      105182833_p0.png
+      illust_56884409_20190928_114254.jpg
+      illust_69080429_20190928_113354.png
+      illust_76542723_20190926_114401.jpg
+  traderdata/
+    assort/
+      exampletrader.jsonc
+      exampletrader2.jsonc
+    suit/
+      suit.jsonc
+    trader/
+      ExampleTrader.jsonc
+      ExampleTrader2.jsonc
+  bundles.json
+  package.jsonc
+空白包/
+  customization/
+    dogtag.jsonc
+  locale/
+    quest/
+      ch.jsonc
+    text/
+      ch.jsonc
+  questdata/
+    achievement.jsonc
+    init.jsonc
+    logic.jsonc
+  recipe/
+    craft.jsonc
+    scavcase.jsonc
+  bundles.json
+  package.jsonc
+.gitignore
+Package.cs
+README.md
+RITC.cs
+RITC.csproj
+RITC.sln
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="示例包/bundles/string">
+
+</file>
+
+<file path="示例包/customization/dogtag.jsonc">
+{
+    "示例狗牌样式": {
+        "_id": "示例狗牌样式",
+        "_name": "示例狗牌样式",
+        "_parent": "6746fafabafff8500804880e",
+        "_type": "Item",
+        "_props": {
+            "AvailableAsDefault": false,
+            "Name": "示例狗牌",
+            "EName": "示例狗牌",
+            "ShortName": "示例狗牌",
+            "Description": "示例狗牌",
+            "ProfileVersions": [],
+            "Side": [
+                "Bear",
+                "Usec"
+            ],
+            "BearTemplateId": "示例狗牌",
+            "UsecTemplateId": "示例狗牌"
+        }
+    }
+}
+</file>
+
+<file path="示例包/items/示例任务物品.jsonc">
+{
+    //物品id
+    "_id": "示例任务物品",
+    //复制的物品模板目标
+    "_targetid": "5910922b86f7747d96753483",
+    "_name": "示例任务物品",
+    //原版物品参数, 具体定义自己参考原版寻思吧
+    //这个世界上除了尼基塔没人能解释清楚所有参数的含义
+    "_props": {
+        "Weight": 0.05,
+        "BackgroundColor": "default",
+        "isQuestItem": true,
+        "StackMaxSize": 1
+    },
+    //自定义物品参数
+    "_customprops": {
+        //自定义物品类型, 这里是任务物品类型
+        "$type": "quest",
+        //物品名, 短名, 介绍, 必填
+        "Name": "示例任务物品",
+        "ShortName": "示例任务物品",
+        "Description": "独立物品范例。",
+        //基准价格, 也就是手册价格
+        "DefaultPrice": 640000,
+        //跳蚤市场/手册分类标签, 必填
+        "RagfairType": "5b619f1a86f77450a702a6f3",
+        //是否能在战局里找到
+        "CanFindInRaid": false,
+        //是否使用自定义战利品数据
+        "CustomLoot": false,
+        //是否视为自定义货币处理
+        "isMoney": false,
+        //任务物品刷新数据, location指向地图, 其余和原版一样
+        "QuestItemData": {
+            "location": "bigmap",
+            "locationId": "(239.183, 0.714, 160.595)",
+            "probability": 1,
+            "template": {
+                "Id": "示例任务物品刷新点",
+                "IsContainer": false,
+                "useGravity": false,
+                "randomRotation": false,
+                "Position": {
+                    "x": 239.183,
+                    "y": 0.714,
+                    "z": 160.595
+                },
+                "Rotation": {
+                    "x": 88.6121,
+                    "y": 270.000122,
+                    "z": 0
+                },
+                "IsGroupPosition": false,
+                "GroupPositions": [],
+                "IsAlwaysSpawn": false,
+                "Root": "示例任务物品刷新位置",
+                "Items": [
+                    {
+                        "_id": "示例任务物品刷新位置",
+                        "_tpl": "示例任务物品"
+                    }
+                ]
+            }
+        }
+    }
+}
+</file>
+
+<file path="示例包/items/示例固定礼盒.jsonc">
+{
+    //物品id
+    "_id": "示例固定礼盒",
+    //复制的物品模板目标
+    "_targetid": "63a8970d7108f713591149f5",
+    "_name": "示例固定礼盒",
+    //原版物品参数, 具体定义自己参考原版寻思吧
+    //这个世界上除了尼基塔没人能解释清楚所有参数的含义
+    "_props": {
+        "Weight": 0.05,
+        "BackgroundColor": "default",
+        "StackMaxSize": 1
+    },
+    //自定义物品参数
+    "_customprops": {
+        //自定义物品类型, 这里是可打开礼包类型
+        //可以拆开获取物品
+        "$type": "giftbox",
+        //物品名, 短名, 介绍, 必填
+        "Name": "示例固定礼盒",
+        "ShortName": "示例固定礼盒",
+        "Description": "独立物品范例。",
+        //基准价格, 也就是手册价格
+        "DefaultPrice": 10000,
+        //跳蚤市场/手册分类标签, 必填
+        "RagfairType": "5b47574386f77428ca22b2f1",
+        //是否能在战局里找到
+        "CanFindInRaid": false,
+        //是否使用自定义战利品数据
+        "CustomLoot": false,
+        //是否视为自定义货币处理
+        "isMoney": false,
+        //是否为固定礼物盒
+        "isStaticBox": true,
+        //内容数据
+        "StaticBoxData": {
+            //是否强制带勾
+            "forcefindinraid": false,
+            //内容的具体数据, 仍然使用多态序列化, 具体的可用类型在卡池数据内有完整示例定义
+            "giftdata": [
+                {
+                    "$type": "Item",
+                    "name": "刀乐",
+                    "itemid": "5696686a4bdc2da3298b456a",
+                    "stackcount": 10000
+                },
+                {
+                    "$type": "Item",
+                    "name": "刀乐2",
+                    "itemid": "5696686a4bdc2da3298b456a",
+                    "stackcount": 10000
+                }
+            ]
+        },
+        //黑名单类型, 使用位运算实现, 0表示none, 1表示空投, 2表示PMC, 4表示Scav宝箱, 8表示黑商, 16表示邪教圈, 32表示日常任务奖励, 64表示全局黑名单
+        //此处为63, 即1+2+4+8+16+32
+        "BlackListType": 63
+    }
+}
+</file>
+
+<file path="示例包/items/示例武器1.jsonc">
+{
+  //物品id
+  "_id": "示例武器1",
+  //复制的物品模板目标
+  "_targetid": "5aafa857e5b5b00018480968",
+  "_name": "示例武器1",
+  //原版物品参数, 具体定义自己参考原版寻思吧
+  //这个世界上除了尼基塔没人能解释清楚所有参数的含义
+  "_props": {
+    "Weight": 0.05,
+    "StackMaxSize": 1,
+    "weapFireType": [
+      "single",
+      "fullauto"
+    ]
+  },
+  //自定义物品参数
+  "_customprops": {
+    //自定义物品类型, 这里是武器类型
+    "$type": "weapon",
+    //物品名, 短名, 介绍, 必填
+    "Name": "示例武器",
+    "ShortName": "示例武器",
+    "Description": "独立物品范例。",
+    //基准价格, 也就是手册价格
+    "DefaultPrice": 320000,
+    //跳蚤市场价格, 不存在时自动fallback到基准价格
+    "RagfairPrice": 640000,
+    //跳蚤市场/手册分类标签, 必填
+    "RagfairType": "5b5f78fc86f77409407a7f90",
+    //是否能在战局里找到
+    "CanFindInRaid": true,
+    //是否使用自定义战利品数据
+    "CustomLoot": false,
+    //修复专精, 即将武器添加到复制源的专精列表内
+    "FixMastering": true,
+    //自定义专精目标, 这里仅做示例, 可以不填, 不填默认使用源物品
+    "CustomMasteringTarget": "5aafa857e5b5b00018480968",
+    //是否视为自定义货币处理
+    "isMoney": false,
+    //是否添加到3x4任务(即收藏家的需求)
+    "addToKappa": false,
+    //自动修复类型
+    "FixType": [
+      //Mods表示对槽位进行修复, 适用于荣誉展柜需要摆放的物品, 特殊装备, 配件, 耳机等
+      "Mods",
+      //任务武器, 单独的武器表示对任何使用复制源的任务条件进行兼容, 如需对武器列表(即多个武器的条件)进行兼容, 请使用QuestWeaponGroup
+      "QuestWeapon"
+    ]
+  }
+}
+</file>
+
+<file path="示例包/items/示例物品1.jsonc">
+{
+  //物品id
+  "_id": "示例物品1",
+  //复制的物品模板目标
+  "_targetid": "5e2aedd986f7746d404f3aa4",
+  "_name": "示例物品1",
+  //原版物品参数, 具体定义自己参考原版寻思吧
+  //这个世界上除了尼基塔没人能解释清楚所有参数的含义
+  "_props": {
+    "Weight": 0.05,
+    "BackgroundColor": "default",
+    "StackMaxSize": 1,
+    "Prefab": {
+      "path": "grassblock.pack",
+      "rcid": ""
+    }
+  },
+  //自定义物品参数
+  "_customprops": {
+    //自定义物品类型, 这里是战利品类型
+    //通常是大部分普通物品的类型, 允许在战局内发现, 允许自动修复
+    "$type": "lootable",
+    //物品名, 短名, 介绍, 必填
+    "Name": "草方块",
+    "ShortName": "草方块",
+    "Description": "独立物品范例。",
+    //基准价格, 也就是手册价格
+    "DefaultPrice": 320000,
+    //跳蚤市场价格, 不存在时自动fallback到基准价格
+    "RagfairPrice": 640000,
+    //跳蚤市场/手册分类标签, 必填
+    "RagfairType": "5b47574386f77428ca22b2f1",
+    //是否能在战局里找到
+    "CanFindInRaid": true,
+    //是否使用自定义战利品数据
+    "CustomLoot": false,
+    //是否视为自定义货币处理
+    "isMoney": false,
+    //是否添加到3x4任务(即收藏家的需求)
+    "addToKappa": true,
+    //自动修复类型
+    "FixType": [
+      //Mods表示对槽位进行修复, 适用于荣誉展柜需要摆放的物品, 特殊装备, 配件, 耳机等
+      "Mods"
+    ]
+  }
+}
+</file>
+
+<file path="示例包/items/示例狗牌.jsonc">
+{
+        "_id": "示例狗牌",
+        "_targetid": "59f32c3b86f77472a31742f0",
+        "_name": "示例狗牌",
+        "_props": {
+            "BackgroundColor": "red"
+        },
+        "_customprops": {
+            //修复物品类, 表示自动兼容
+            //buff, 武器和容器会自动继承这个类型, 也就是自带兼容属性, 填写兼容即可自动适配
+            "$type": "fixed",
+            "Name": "示例狗牌",
+            "ShortName": "示例",
+            "Description": "独立物品范例。",
+            //狗牌的价值比较特殊, 它由等级x基础价值得到, 所以请不要把基础价值填的太高
+            "DefaultPrice": 400,
+            "RagfairType": "5b47574386f77428ca22b2f4",
+            "CanFindInRaid": false,
+            "CustomLoot": false,
+            "CustomLootTarget": "59faff1d86f7746c51718c9c",
+            "isMoney": false,
+            "BlackListType": 63,
+            "FixType": [
+                //容器
+                "Container",
+                //槽位
+                "Mods",
+                //上交物品组, 即上交多个类型的物品且包含原物品的任务条件
+                "HandoverItemGroup"
+            ],
+            //复制价格, 这个参数会让独立物品和原物品价值相同
+            "CopyPrice": true,
+            //允许狗牌样式在PMC身上生成
+            "ApplyAsPMCDogTag": true,
+            //允许作为Usec狗牌样式生成
+            "ApplyToUSEC": true,
+            //允许作为Bear狗牌样式生成
+            "ApplyToBEAR": true,
+            //白边/黑边/蓝边
+            "ApplyToStandard": false,
+            "ApplyToEOD": false,
+            "ApplyToUnheard": true
+        }
+    }
+</file>
+
+<file path="示例包/items/示例礼盒.jsonc">
+{
+  //物品id
+  "_id": "示例礼盒",
+  //复制的物品模板目标
+  "_targetid": "63a8970d7108f713591149f5",
+  "_name": "示例礼盒",
+  //原版物品参数, 具体定义自己参考原版寻思吧
+  //这个世界上除了尼基塔没人能解释清楚所有参数的含义
+  "_props": {
+    "Weight": 0.05,
+    "BackgroundColor": "default",
+    "StackMaxSize": 1
+  },
+  //自定义物品参数
+  "_customprops": {
+    //自定义物品类型, 这里是可打开礼包类型
+    //可以拆开获取物品
+    "$type": "giftbox",
+    //物品名, 短名, 介绍, 必填
+    "Name": "示例礼盒",
+    "ShortName": "示例礼盒",
+    "Description": "独立物品范例。",
+    //基准价格, 也就是手册价格
+    "DefaultPrice": 10000,
+    //跳蚤市场/手册分类标签, 必填
+    "RagfairType": "5b47574386f77428ca22b2f1",
+    //是否能在战局里找到
+    "CanFindInRaid": false,
+    //是否使用自定义战利品数据
+    "CustomLoot": false,
+    //是否视为自定义货币处理
+    "isMoney": false,
+    //是否为原版礼物盒
+    "isGiftBox": true,
+    //礼物盒数据
+    "BoxData": {
+      //抽取数量
+      "Count": 5,
+      //奖励内容, 加权计算
+      "Rewards": {
+        "5696686a4bdc2da3298b456a": 1
+      }
+    },
+    //黑名单类型, 使用位运算实现, 0表示none, 1表示空投, 2表示PMC, 4表示Scav宝箱, 8表示黑商, 16表示邪教圈, 32表示日常任务奖励, 64表示全局黑名单
+    //此处为63, 即1+2+4+8+16+32
+    "BlackListType": 63
+  }
+}
+</file>
+
+<file path="示例包/items/示例货币.jsonc">
+{
+    //物品id
+    "_id": "示例货币",
+    //复制的物品模板目标
+    "_targetid": "59faff1d86f7746c51718c9c",
+    "_name": "示例货币",
+    //原版物品参数, 具体定义自己参考原版寻思吧
+    //这个世界上除了尼基塔没人能解释清楚所有参数的含义
+    "_props": {
+        "Weight": 0.00,
+        "BackgroundColor": "default",
+        "CanFindInRaid": true,
+        "CustomLoot": true,
+        "CustomLootTarget": "5696686a4bdc2da3298b456a",
+        "isMoney": true,
+        "StackMaxSize": 100000,
+        "StackMinRandom": 300,
+        "StackMaxRandom": 500
+    },
+    //自定义物品参数
+    "_customprops": {
+        //自定义物品类型, 这里是战利品类型
+        //通常是大部分普通物品的类型, 允许在战局内发现, 允许自动修复
+        "$type": "lootable",
+        //物品名, 短名, 介绍, 必填
+        "Name": "示例货币",
+        "ShortName": "示例货币",
+        "Description": "独立物品范例。",
+        //基准价格, 也就是手册价格
+        "DefaultPrice": 100,
+        //跳蚤市场/手册分类标签, 必填
+        "RagfairType": "5b5f78b786f77447ed5636af",
+        //是否能在战局里找到
+        "CanFindInRaid": true,
+        //使用自定义战利品数据
+        "CustomLoot": true,
+        //自定义战利品数据详解
+        //允许作为零散物资生成
+        "MapLoot": true,
+        //自定义零散物资目标(允许留空)
+        "CustomMapLootTarget": "590c60fc86f77412b13fddcf",
+        //自定义零散物资除数(越高概率越低), 可以留空
+        "MapLootDivisor": 2,
+        //允许作为容器物资生成
+        "StaticLoot": false,
+        //自定义容器物资目标(允许留空)
+        "CustomStaticLootTarget": "590c60fc86f77412b13fddcf",
+        //自定义容器物资除数(越高概率越低), 可以留空
+        "StaticLootDivisor": 2,
+        //是否视为自定义货币处理
+        "isMoney": true,
+        //黑名单类型, 使用位运算实现, 0表示none, 1表示空投, 2表示PMC, 4表示Scav宝箱, 8表示黑商, 16表示邪教圈, 32表示日常任务奖励, 64表示全局黑名单
+        //此处为10, 即2+8, 也就是PMC和黑商处禁用
+        "BlackListType": 10,
+        //自动修复类型
+        "FixType": [
+            //Container表示对可以容纳此物品的容器进行修复
+            "Container",
+            //Mods表示对槽位进行修复, 适用于荣誉展柜需要摆放的物品, 特殊装备, 配件, 耳机等
+            "Mods"
+        ]
+    }
+}
+</file>
+
+<file path="示例包/items/示例针剂1.jsonc">
+{
+    //物品id
+    "_id": "示例针剂1",
+    //复制的物品模板目标
+    "_targetid": "5c0e531d86f7747fa23f4d42",
+    "_name": "示例针剂1",
+    //原版物品参数, 具体定义自己参考原版寻思吧
+    //这个世界上除了尼基塔没人能解释清楚所有参数的含义
+    "_props": {
+        //buff组命名, 不可重复
+        "StimulatorBuffs": "BuffsTestSyringe"
+    },
+    //自定义物品参数
+    "_customprops": {
+        //自定义物品类型, 这里是buff物品类型
+        //通常是注射器
+        "$type": "buff",
+        //物品名, 短名, 介绍, 必填
+        "Name": "示例针剂",
+        "ShortName": "示例针剂",
+        "Description": "独立物品范例。",
+        //基准价格, 也就是手册价格
+        "DefaultPrice": 10000,
+        //跳蚤市场/手册分类标签, 必填
+        "RagfairType": "5b47574386f77428ca22b33a",
+        //是否能在战局里找到
+        "CanFindInRaid": false,
+        //是否使用自定义战利品数据
+        "CustomLoot": false,
+        //是否视为自定义货币处理
+        "isMoney": false,
+        //黑名单类型, 使用位运算实现, 0表示none, 1表示空投, 2表示PMC, 4表示Scav宝箱, 8表示黑商, 16表示邪教圈, 32表示日常任务奖励, 64表示全局黑名单
+        //此处为2
+        "BlackListType": 2,
+        //Buff组数据, 和原版定义相同
+        "BuffValue": [
+            {
+                "BuffType": "HydrationRate",
+                "Chance": 1,
+                "Delay": 1,
+                "Duration": 120,
+                "Value": 10,
+                "AbsoluteValue": true,
+                "SkillName": ""
+            },
+            {
+                "BuffType": "EnergyRate",
+                "Chance": 1,
+                "Delay": 1,
+                "Duration": 120,
+                "Value": 10,
+                "AbsoluteValue": true,
+                "SkillName": ""
+            }
+        ]
+    }
+}
+</file>
+
+<file path="示例包/items/示例针包.jsonc">
+{
+        "_id": "示例针包",
+        "_targetid": "619cbf7d23893217ec30b689",
+        "_name": "示例针包",
+        "_props": {
+            "Weight": 0,
+            "BackgroundColor": "red",
+            "Width": 1,
+            "Height": 1
+        },
+        "_customprops": {
+            //容器类型
+            "$type": "container",
+            "Name": "示例针包",
+            "ShortName": "针包",
+            "Description": "独立物品范例。",
+            "RagfairType": "5b5f6fa186f77409407a7eb7",
+            "DefaultPrice": 600000,
+            "CanFindInRaid": false,
+            "CustomLoot": false,
+            "CustomLootTarget": "59faff1d86f7746c51718c9c",
+            "isMoney": false,
+            "BlackListType": 63,
+            //容器定义, 分别对应宽和高
+            //仅限单空间容器, 多空间容器复杂定义纯服务端无法实现
+            "ContainerSizeWidth": 6,
+            "ContainerSizeHeight": 6,
+            "FixType": [
+                "Container"
+            ]
+        }
+    }
+</file>
+
+<file path="示例包/items/示例高级礼盒.jsonc">
+{
+    //物品id
+    "_id": "示例高级礼盒",
+    //复制的物品模板目标
+    "_targetid": "63a8970d7108f713591149f5",
+    "_name": "示例高级礼盒",
+    //原版物品参数, 具体定义自己参考原版寻思吧
+    //这个世界上除了尼基塔没人能解释清楚所有参数的含义
+    "_props": {
+        "Weight": 0.05,
+        "BackgroundColor": "default",
+        "StackMaxSize": 1
+    },
+    //自定义物品参数
+    "_customprops": {
+        //自定义物品类型, 这里是可打开礼包类型
+        //可以拆开获取物品
+        "$type": "giftbox",
+        //物品名, 短名, 介绍, 必填
+        "Name": "示例高级礼盒",
+        "ShortName": "示例高级礼盒",
+        "Description": "独立物品范例。",
+        //基准价格, 也就是手册价格
+        "DefaultPrice": 10000,
+        //跳蚤市场/手册分类标签, 必填
+        "RagfairType": "5b47574386f77428ca22b2f1",
+        //是否能在战局里找到
+        "CanFindInRaid": false,
+        //是否使用自定义战利品数据
+        "CustomLoot": false,
+        //是否视为自定义货币处理
+        "isMoney": false,
+        //是否为高级礼物盒(拥有自定义卡池数据)
+        "isAdvGiftBox": true,
+        "AdvBoxData": {
+            "count": 10,
+            "forcefindinraid": true,
+            "giftdata": "示例高级礼盒"
+        },
+        //黑名单类型, 使用位运算实现, 0表示none, 1表示空投, 2表示PMC, 4表示Scav宝箱, 8表示黑商, 16表示邪教圈, 32表示日常任务奖励, 64表示全局黑名单
+        //此处为63, 即1+2+4+8+16+32
+        "BlackListType": 63
+    }
+}
+</file>
+
+<file path="示例包/locale/quest/ch.jsonc">
+{
+    //任务ID
+    //所有数据格式相同, 往后不再注释解释
+    "示例任务1": {
+        //任务名称
+        "name": "示例任务1",
+        //任务笔记(应该没用)
+        "note": "",
+        //任务条件本地化
+        "conditions": {
+            //每一个对应任务条件的ID
+            "示例任务1寻找物品1": "在战局中找到六可乐",
+            "示例任务1上交物品1": "上交六可乐",
+            "示例任务1寻找物品2": "在战局中找到纯净水",
+            "示例任务1上交物品2": "上交纯净水",
+            "示例任务1寻找物品3": "在战局中找到示例任务物品",
+            "示例任务1上交物品3": "上交示例任务物品"
+        },
+        //介绍
+        "description": "示例任务1介绍",
+        //失败
+        "failMessageText": "示例任务1失败消息",
+        //开始
+        "startedMessageText": "示例任务1开始消息（基本没用，绝大部分任务的开始消息与介绍都一样）",
+        //完成
+        "successMessageText": "示例任务1完成消息",
+        //不知道干啥的, 仅做保留
+        "location": "any"
+    },
+    "示例任务2": {
+        "name": "示例任务2",
+        "note": "",
+        "conditions": {
+            "示例任务2杀敌需求1": "击杀任意目标",
+            "示例任务2杀敌需求2": "装备幽灵半面巾与ComTac 2耳机，使用MP-133霰弹枪击杀任意PMC干员",
+            "示例任务2杀敌需求3": "在06:00-18:00期间使用装有消音器的SKS步枪在40米外击杀Bear干员",
+            "示例任务2杀敌需求4": "在海岸线找到并击杀Sanitar",
+            "示例任务2杀敌需求5": "在宿舍楼区域击杀Scav"
+        },
+        "description": "示例任务2介绍",
+        "failMessageText": "示例任务2失败消息",
+        "startedMessageText": "示例任务2开始消息（基本没用，绝大部分任务的开始消息与介绍都一样）",
+        "successMessageText": "示例任务2完成消息",
+        "location": "any"
+    },
+    "示例任务3": {
+        "name": "示例任务3",
+        "note": "",
+        "conditions": {
+            "示例任务3踩点需求1": "找到工厂的第一个撤离点",
+            "示例任务3撤离需求1": "以幸存状态从海岸线撤离",
+            "示例任务3撤离需求2": "以幸存状态从海岸线的通往海关的路撤离点撤离"
+        },
+        "description": "示例任务3介绍",
+        "failMessageText": "示例任务3失败消息",
+        "startedMessageText": "示例任务3开始消息（基本没用，绝大部分任务的开始消息与介绍都一样）",
+        "successMessageText": "示例任务3完成消息",
+        "location": "any"
+    },
+    "示例任务4": {
+        "name": "示例任务4",
+        "note": "",
+        "conditions": {
+            "示例任务4等级需求1": "达到指定的等级",
+            "示例任务4安放需求1": "将白卡藏匿到伐木场宿舍区的中间小屋内",
+            "示例任务4技能需求1": "达到指定的感知技能等级"
+        },
+        "description": "示例任务4介绍",
+        "failMessageText": "示例任务4失败消息",
+        "startedMessageText": "示例任务4开始消息（基本没用，绝大部分任务的开始消息与介绍都一样）",
+        "successMessageText": "示例任务4完成消息",
+        "location": "any"
+    }
+}
+</file>
+
+<file path="示例包/locale/text/ch.jsonc">
+{
+    //全局本地化数据
+    //也就是传统的key-value格式, 可以对原版文本进行覆盖
+    //支持多语言
+    "示例商人2保险激活文本1": "保险业务激活成功，别担心，你的东西会回来的。",
+    "示例商人2保险寻回文本1": "你的保险生效了，来看看有没有缺什么。",
+    "示例商人2保险失败文本1": "好吧，看来有人抢先了一步……",
+    "示例商人2保险实验室失败文本1": "实验室？你怎么把东西丢在那地方了？你没有阅读用户手册吗？",
+    "示例商人2保险过期文本1": "你的东西？我可不是做慈善的，那已经不是你的东西了。",
+    "示例商人2保险完成文本1": "理论上这条信息永远也不会触发，如果你看到这个，说明你的游戏出了些问题。",
+    //覆盖示例
+    "54cb50c76803fa8b248b4571 Nickname": "毛商",
+    //以下字段已经废弃
+    "616041eb031af660100c9967 startedMessageText ExampleTrader 0": "",
+    "616041eb031af660100c9967 failMessageText ExampleTrader 0": "我怎么记得日常任务失败是不会发消息的来着？可能要留空。",
+    "616041eb031af660100c9967 successMessageText ExampleTrader 0": "日常任务完成。",
+    "616041eb031af660100c9967 description ExampleTrader 0": "日常任务激活，类型：安全撤离",
+    "616041eb031af660100c9967 changeQuestMessageText ExampleTrader 0": "你确定要更换日常任务吗？",
+    "61604635c725987e815b1a46 startedMessageText ExampleTrader 0": "",
+    "61604635c725987e815b1a46 failMessageText ExampleTrader 0": "",
+    "61604635c725987e815b1a46 successMessageText ExampleTrader 0": "日常任务完成。",
+    "61604635c725987e815b1a46 description ExampleTrader 0": "日常任务激活，类型：寻物上交",
+    "61604635c725987e815b1a46 changeQuestMessageText ExampleTrader 0": "你确定要更换日常任务吗？",
+    "616052ea3054fc0e2c24ce6e startedMessageText ExampleTrader 0": "",
+    "616052ea3054fc0e2c24ce6e failMessageText ExampleTrader 0": "",
+    "616052ea3054fc0e2c24ce6e successMessageText ExampleTrader 0": "日常任务完成。",
+    "616052ea3054fc0e2c24ce6e description ExampleTrader 0": "日常任务激活，类型：强制抹除",
+    "616052ea3054fc0e2c24ce6e changeQuestMessageText ExampleTrader 0": "你确定要更换日常任务吗？",
+    "测试自定义每日任务 startedMessageText ExampleTrader 0": "",
+    "测试自定义每日任务 failMessageText ExampleTrader 0": "",
+    "测试自定义每日任务 successMessageText ExampleTrader 0": "测试自定义每日任务完成。",
+    "测试自定义每日任务 description ExampleTrader 0": "测试自定义每日任务激活，类型：寻物上交",
+    "测试自定义每日任务 changeQuestMessageText ExampleTrader 0": "请勿更换测试自定义每日任务"
+}
+</file>
+
+<file path="示例包/pool/示例高级礼盒.jsonc">
+{
+    //卡池名称, 唯一标识
+    "name": "示例高级礼盒",
+    //保底设置
+    "basereward": {
+        //sr
+        "superrare": {
+            //是否启用保底机制
+            "havebasereward": true,
+            //原生概率, 参与计算
+            "chance": 0.04,
+            //抽到up内容的概率
+            "upchance": 0.5,
+            //未抽到up内容时下次抽到金色内容为up内容的概率提升(即保底累加, 0.5/0.5即是大小保底)
+            "upaddchance": 0.5,
+            //概率提升需要的累计次数
+            "chancegrowcount": 73,
+            //进入概率提升区间后每次抽卡增加的出金概率
+            "chancegrowpercount": 0.06
+            //实际保底计算规则为(1-原生概率)/提升概率 + 提升累计次数 + 1
+            //这里也就是(1-0.04)/0.06=16+73+1, 即最多90抽必出金
+            //以上仅在启用保底机制时生效
+        },
+        //r
+        "rare": {
+            //数据定义同上, 基本无需改动
+            "havebasereward": true,
+            "chance": 0.1,
+            "upchance": 0.75,
+            "upaddchance": 0.25,
+            "chancegrowcount": 0,
+            "chancegrowpercount": 0.1
+        },
+        //普通数据, 无用, 仅做保留, 不可删除
+        "normal": {
+            "upchance": 0
+        }
+    },
+    //卡池数据
+    "itempool": {
+        "superrare": {
+            //概率提升区(up内容)
+            "chanceup": [
+                {
+                    //普通物品类型, 多态序列化
+                    "$type": "Item",
+                    //物品名字段, 参与计算唯一ID, 不可重复
+                    "name": "红卡",
+                    //物品ID
+                    "itemid": "5c1d0efb86f7744baf2e7b7b",
+                    //物品数量
+                    "stackcount": 1
+                }
+            ],
+            //普通内容
+            "normal": [
+                //定义重复的内容不再标注
+                {
+                    "$type": "Item",
+                    "name": "蓝卡",
+                    "itemid": "5c1d0c5f86f7744bb2683cf0",
+                    "stackcount": 1
+                },
+                {
+                    "$type": "Item",
+                    "name": "绿卡",
+                    "itemid": "5c1d0dc586f7744baf2e7b79",
+                    "stackcount": 1
+                },
+                {
+                    "$type": "Item",
+                    "name": "黑卡",
+                    "itemid": "5c1d0f4986f7744bb01837fa",
+                    "stackcount": 1
+                }
+            ]
+        },
+        "rare": {
+            "chanceup": [
+                {
+                    //自定义预设类型, 多态序列化
+                    "$type": "CustomPreset",
+                    //标识字段
+                    "name": "改枪测试1",
+                    //预设内容字段, 和原版格式完全一致
+                    "item": [
+                        {
+                            "_id": "报价单范例6",
+                            "_tpl": "5c07c60e0db834002330051f",
+                            "parentId": "hideout",
+                            "slotId": "hideout",
+                            "upd": {
+                                "FireMode": {
+                                    "FireMode": "single"
+                                }
+                            }
+                        },
+                        {
+                            "_id": "f99fd4e4792190af8264e040",
+                            "_tpl": "55802f5d4bdc2dac148b458f",
+                            "parentId": "报价单范例6",
+                            "slotId": "mod_pistol_grip"
+                        },
+                        {
+                            "_id": "54aeb81d4fc58408af288f66",
+                            "_tpl": "55802d5f4bdc2dac148b458e",
+                            "parentId": "报价单范例6",
+                            "slotId": "mod_magazine"
+                        },
+                        {
+                            "_id": "e119dc184c5c6f862255eda3",
+                            "_tpl": "63f5ed14534b2c3d5479a677",
+                            "parentId": "报价单范例6",
+                            "slotId": "mod_reciever"
+                        },
+                        {
+                            "_id": "eae2acd79148c665c95af0e0",
+                            "_tpl": "5c793fb92e221644f31bfb64",
+                            "parentId": "报价单范例6",
+                            "slotId": "mod_stock"
+                        },
+                        {
+                            "_id": "300cc34f501dae2e31cf7570",
+                            "_tpl": "5d44334ba4b9362b346d1948",
+                            "parentId": "报价单范例6",
+                            "slotId": "mod_charge"
+                        },
+                        {
+                            "_id": "1e811988684993b2b6dc0697",
+                            "_tpl": "618b9643526131765025ab35",
+                            "parentId": "e119dc184c5c6f862255eda3",
+                            "slotId": "mod_scope"
+                        },
+                        {
+                            "_id": "dab13a884ac5c221ff1df307",
+                            "_tpl": "63d3d44a2a49307baf09386d",
+                            "parentId": "e119dc184c5c6f862255eda3",
+                            "slotId": "mod_barrel"
+                        },
+                        {
+                            "_id": "a17318e21e6eeb7d237967af",
+                            "_tpl": "5c78f2492e221600114c9f04",
+                            "parentId": "e119dc184c5c6f862255eda3",
+                            "slotId": "mod_handguard"
+                        },
+                        {
+                            "_id": "eda3047b0819038a681f4e96",
+                            "_tpl": "5bc09a18d4351e003562b68e",
+                            "parentId": "e119dc184c5c6f862255eda3",
+                            "slotId": "mod_sight_rear",
+                            "upd": {
+                                "Sight": {
+                                    "ScopesCurrentCalibPointIndexes": [
+                                        0
+                                    ],
+                                    "ScopesSelectedModes": [
+                                        0
+                                    ],
+                                    "SelectedScope": 0
+                                }
+                            }
+                        },
+                        {
+                            "_id": "a1c6be0ee0065d0a42443e05",
+                            "_tpl": "56eabf3bd2720b75698b4569",
+                            "parentId": "eae2acd79148c665c95af0e0",
+                            "slotId": "mod_stock_000"
+                        },
+                        {
+                            "_id": "6117657b1a7870e59c21b2b2",
+                            "_tpl": "5b3b99475acfc432ff4dcbee",
+                            "parentId": "1e811988684993b2b6dc0697",
+                            "slotId": "mod_scope",
+                            "upd": {
+                                "Sight": {
+                                    "ScopesCurrentCalibPointIndexes": [
+                                        0
+                                    ],
+                                    "ScopesSelectedModes": [
+                                        0
+                                    ],
+                                    "SelectedScope": 0
+                                }
+                            }
+                        },
+                        {
+                            "_id": "67a587a8fbe9193defa1437c",
+                            "_tpl": "618b9671d14d6d5ab879c5ea",
+                            "parentId": "1e811988684993b2b6dc0697",
+                            "slotId": "mod_mount"
+                        },
+                        {
+                            "_id": "a1f89af831fd4cb62675c325",
+                            "_tpl": "6386120cd6baa055ad1e201c",
+                            "parentId": "dab13a884ac5c221ff1df307",
+                            "slotId": "mod_muzzle"
+                        },
+                        {
+                            "_id": "514e439d8c790de76c66f597",
+                            "_tpl": "63d3ce281fe77d0f2801859e",
+                            "parentId": "dab13a884ac5c221ff1df307",
+                            "slotId": "mod_gas_block"
+                        },
+                        {
+                            "_id": "e3d30be4ac03b2c879b9e92e",
+                            "_tpl": "6269220d70b6c02e665f2635",
+                            "parentId": "a17318e21e6eeb7d237967af",
+                            "slotId": "mod_mount_000"
+                        },
+                        {
+                            "_id": "4f8a5b9f488ce62b91ae82d1",
+                            "_tpl": "6269220d70b6c02e665f2635",
+                            "parentId": "a17318e21e6eeb7d237967af",
+                            "slotId": "mod_mount_001"
+                        },
+                        {
+                            "_id": "46c0502d171f4f4bf3dc7a4d",
+                            "_tpl": "5b7be4895acfc400170e2dd5",
+                            "parentId": "a17318e21e6eeb7d237967af",
+                            "slotId": "mod_foregrip"
+                        },
+                        {
+                            "_id": "0d4ba70a3d9a55e7d0b7806d",
+                            "_tpl": "5bc09a30d4351e00367fb7c8",
+                            "parentId": "a17318e21e6eeb7d237967af",
+                            "slotId": "mod_sight_front",
+                            "upd": {
+                                "Sight": {
+                                    "ScopesCurrentCalibPointIndexes": [
+                                        0
+                                    ],
+                                    "ScopesSelectedModes": [
+                                        0
+                                    ],
+                                    "SelectedScope": 0
+                                }
+                            }
+                        },
+                        {
+                            "_id": "d7c9b7dab618a4a0264dbb60",
+                            "_tpl": "626becf9582c3e319310b837",
+                            "parentId": "a17318e21e6eeb7d237967af",
+                            "slotId": "mod_tactical_003",
+                            "upd": {
+                                "Light": {
+                                    "IsActive": true,
+                                    "SelectedMode": 0
+                                }
+                            }
+                        },
+                        {
+                            "_id": "7164bbcf369c6048ec6990ca",
+                            "_tpl": "638612b607dfed1ccb7206ba",
+                            "parentId": "a1f89af831fd4cb62675c325",
+                            "slotId": "mod_muzzle"
+                        },
+                        {
+                            "_id": "f84cc8421c58e1f08ec2e077",
+                            "_tpl": "588226d124597767ad33f787",
+                            "parentId": "46c0502d171f4f4bf3dc7a4d",
+                            "slotId": "mod_foregrip"
+                        },
+                        {
+                            "_id": "0753b497ccf0ca12447773f6",
+                            "_tpl": "58d2912286f7744e27117493",
+                            "parentId": "a1c6be0ee0065d0a42443e05",
+                            "slotId": "mod_stock"
+                        }
+                    ]
+                }
+            ],
+            "normal": [
+                {
+                    //原版预设
+                    "$type": "VanillaPreset",
+                    //标识字段
+                    "name": "M4A1标准",
+                    //物品ID
+                    "item": "5447a9cd4bdc2dbd208b4567"
+                },
+                {
+                    "$type": "VanillaPreset",
+                    "name": "MMAC",
+                    "item": "61bc85697113f767765c7fe7"
+                },
+                {
+                    "$type": "Item",
+                    "name": "BTC",
+                    "itemid": "59faff1d86f7746c51718c9c",
+                    "stackcount": 1
+                },
+                {
+                    "$type": "Item",
+                    "name": "M995",
+                    "itemid": "59e690b686f7746c9f75e848",
+                    "stackcount": 60
+                },
+                {
+                    "$type": "Item",
+                    "name": "盒装M995",
+                    "itemid": "6570265f1419851aef03e739",
+                    "stackcount": 1
+                }
+            ]
+        },
+        "normal": {
+            "chanceup": [
+                {
+                    "$type": "Item",
+                    "name": "白卡",
+                    "itemid": "5c94bbff86f7747ee735c08f",
+                    "stackcount": 1
+                }
+            ],
+            "normal": [
+                {
+                    "$type": "Item",
+                    "name": "金蛋",
+                    "itemid": "62a09cfe4f842e1bd12da3e4",
+                    "stackcount": 1
+                },
+                {
+                    "$type": "Item",
+                    "name": "银徽章",
+                    "itemid": "5bc9bdb8d4351e003562b8a1",
+                    "stackcount": 1
+                },
+                {
+                    "$type": "Item",
+                    "name": "蛇链",
+                    "itemid": "5c1267ee86f77416ec610f72",
+                    "stackcount": 1
+                },
+                {
+                    "$type": "Item",
+                    "name": "狮雕",
+                    "itemid": "59e3639286f7741777737013",
+                    "stackcount": 1
+                },
+                {
+                    "$type": "Item",
+                    "name": "管道扳手",
+                    "itemid": "619cbfccbedcde2f5b3f7bdd",
+                    "stackcount": 1
+                }
+            ]
+        }
+    }
+}
+</file>
+
+<file path="示例包/preset/示例武器预设.jsonc">
+{
+    //武器预设文件
+    //护甲的格式是相同的
+    "Name": "示例武器_基础预设",
+    //预设名字
+    "PresetName": "Default",
+    //是否为基础预设
+    "IsBasePreset": true,
+    //是否显示预设名称
+    "ChangePresetName": false,
+    //是否可以在战局里生成
+    "SpawnInRaid": false,
+    //生成共享目标
+    "SpawnTarget": "5aafa857e5b5b00018480968",
+    //预设内容
+    "Preset": [
+        {
+            "_id": "6974bd5d07fc976cb875d3ba",
+            "_tpl": "1b08e90862fa824d853fd76d",
+            "upd": {
+                "Repairable": {
+                    "Durability": 100,
+                    "MaxDurability": 100
+                },
+                "FireMode": {
+                    "FireMode": "single"
+                }
+            }
+        },
+        {
+            "_id": "6974bd5d07fc976cb875d3bb",
+            "_tpl": "5aaf8a0be5b5b00015693243",
+            "parentId": "6974bd5d07fc976cb875d3ba",
+            "slotId": "mod_magazine"
+        },
+        {
+            "_id": "6974bd5d07fc976cb875d3bc",
+            "_tpl": "5aaf8e43e5b5b00015693246",
+            "parentId": "6974bd5d07fc976cb875d3ba",
+            "slotId": "mod_stock"
+        },
+        {
+            "_id": "6974bd5d07fc976cb875d3bd",
+            "_tpl": "5aaf9d53e5b5b00015042a52",
+            "parentId": "6974bd5d07fc976cb875d3ba",
+            "slotId": "mod_barrel"
+        },
+        {
+            "_id": "6974bd5d07fc976cb875d3be",
+            "_tpl": "5abcbb20d8ce87001773e258",
+            "parentId": "6974bd5d07fc976cb875d3ba",
+            "slotId": "mod_sight_rear",
+            "upd": {
+                "Sight": {
+                    "ScopesCurrentCalibPointIndexes": [
+                        0
+                    ],
+                    "ScopesSelectedModes": [
+                        0
+                    ],
+                    "SelectedScope": 0,
+                    "ScopeZoomValue": 0
+                }
+            }
+        },
+        {
+            "_id": "6974bd5d07fc976cb875d3bf",
+            "_tpl": "5ab3afb2d8ce87001660304d",
+            "parentId": "6974bd5d07fc976cb875d3bd",
+            "slotId": "mod_muzzle"
+        },
+        {
+            "_id": "6974bd5d07fc976cb875d3c0",
+            "_tpl": "5addba3e5acfc4001669f0ab",
+            "parentId": "6974bd5d07fc976cb875d3bf",
+            "slotId": "mod_sight_front",
+            "upd": {
+                "Sight": {
+                    "ScopesCurrentCalibPointIndexes": [
+                        0
+                    ],
+                    "ScopesSelectedModes": [
+                        0
+                    ],
+                    "SelectedScope": 0,
+                    "ScopeZoomValue": 0
+                }
+            }
+        }
+    ]
+}
+</file>
+
+<file path="示例包/questdata/achievement/示例成就2.jsonc">
+{
+        //id
+        "id": "示例成就2",
+        //图片路径
+        "img": "/files/icon/example2.png",
+        //成就名
+        "name": "示例成就2",
+        //成就描述
+        "description": "我也是一个示例成就(消灭任意目标)",
+        //成就稀有度, 三个等级, Common/Rare/Legendary
+        "rarity": "Rare",
+        //阵营? 我没试过
+        "side": "All",
+        //未知参数
+        "instantComplete": false,
+        //未知参数
+        "showNotificationsInGame": false,
+        //显示进度? 作用不明
+        "showProgress": false,
+        //是否为隐藏成就
+        "hidden": false,
+        //是否显示成就要求
+        "showConditions": true,
+        //显示进度条
+        "progressBarEnabled": true,
+        //成就要求
+        //与任务条件定义一致
+        "conditions": {
+            "finish": [
+                {
+                    "$type": "kill",
+                    "id": "示例成就2_需求",
+                    "locale": "？？？",
+                    "oneraid": false,
+                    "count": 1,
+                    "counterid": "示例成就2_需求_计数器",
+                    "bot": "Savage",
+                    "role": [],
+                    "conditionid": "示例成就2_需求_计数器_需求",
+                    "bodyPart": 0,
+                    "daytime": [
+                        0,
+                        0
+                    ],
+                    "distance": 0,
+                    "distancetype": 3,
+                    "weapon": [],
+                    "mod": [],
+                    "location": 8191,
+                    "zone": [],
+                    "equip": [],
+                    "enemyequip": []
+                }
+            ],
+            "failed": []
+        },
+        "rewards": []
+    }
+</file>
+
+<file path="示例包/questdata/init/示例任务1.jsonc">
+{
+    //任务ID
+    "ID": "示例任务1",
+    //任务类型(就是任务名左边小图标的显示)
+    "Type": 0,
+    //任务插图路径
+    "ImagePath": "/files/quest/icon/illust_56884409_20190928_114254.jpg",
+    //任务所属的商人
+    "TraderID": "ExampleTrader",
+    //任务地点(也是任务页面的显示, 具体ID定义有点复杂, 在ch文件里可以查询)
+    "Location": "any",
+    //失败后是否可以重新接取
+    "Restartable": false,
+    //任务条件数据
+    "QuestData": {
+        "Finish": [
+            {
+                //多态序列化, 找到物品类型
+                "$type": "find",
+                //任务条件ID, 全局唯一, 不可重复
+                "id": "示例任务1寻找物品1",
+                //是否要求带勾
+                "inraid": true,
+                //物品ID
+                "itemid": "60b0f93284c20f0feb453da7",
+                //物品数量
+                "count": 1
+            },
+            {
+                //上交物品类型, 除此处类型之外其余和上面一样
+                "$type": "hand",
+                "id": "示例任务1上交物品1",
+                "inraid": true,
+                "itemid": "60b0f93284c20f0feb453da7",
+                "count": 1
+            },
+            {
+                "$type": "find",
+                "id": "示例任务1寻找物品2",
+                "inraid": true,
+                "itemid": "5d1b33a686f7742523398398",
+                "count": 1
+            },
+            {
+                "$type": "hand",
+                "id": "示例任务1上交物品2",
+                "inraid": true,
+                "itemid": "5d1b33a686f7742523398398",
+                "count": 1
+            },
+            {
+                "$type": "find",
+                "id": "示例任务1寻找物品3",
+                "inraid": false,
+                "itemid": "示例任务物品",
+                "count": 1
+            },
+            {
+                "$type": "hand",
+                "id": "示例任务1上交物品3",
+                "inraid": false,
+                "itemid": "示例任务物品",
+                "count": 1
+            }
+        ],
+        "Failed": []
+    },
+    //任务奖励数据
+    "QuestReward": [
+        {
+            //任务奖励, 多态序列化, 经验奖励
+            "$type": "experience",
+            //任务奖励ID, 全局唯一, 不可重复
+            "ID": "示例任务1经验奖励1",
+            //任务阶段, 0开始1完成2失败, 部分奖励在失败阶段疑似无法正常发放, 自行测试
+            "Stage": 1,
+            //对应的任务/成就ID, 必填
+            "Quest": "示例任务1",
+            //数值
+            "Count": 2000,
+            //是否为隐藏奖励(此条目无效)
+            "Hidden": false,
+            //是否为未知奖励(即任务完成后才能看到具体奖励内容)
+            "Unknown": false,
+            //是否为成就奖励, 设置为true即可为成就添加奖励
+            "IsAchievement": false
+        }
+    ]
+}
+</file>
+
+<file path="示例包/questdata/init/示例任务2.jsonc">
+{
+    "ID": "示例任务2",
+    "Type": 1,
+    "ImagePath": "/files/quest/icon/illust_69080429_20190928_113354.png",
+    "TraderID": "ExampleTrader",
+    "Location": "any",
+    "Restartable": false,
+    "QuestData": {
+        "Finish": [
+            {
+                //杀敌条件
+                "$type": "kill",
+                "id": "示例任务2杀敌需求1",
+                //是否单局完成
+                "oneraid": false,
+                //数量
+                "count": 15,
+                "counterid": "示例任务2杀敌需求1_计数器",
+                //AI类型, 此处为Any即任意敌人
+                "bot": "Any",
+                //指定AI角色, 用于处理特定类型的AI或Boss
+                "role": [],
+                "conditionid": "示例任务2杀敌需求1_计数器_需求",
+                //躯体部位, 依然位运算, 0为不要求
+                //1头2胸4胃8/16左右手32/64左右腿
+                "bodyPart": 0,
+                //时间区间, 24小时制
+                "daytime": [
+                    0,
+                    0
+                ],
+                //距离要求
+                "distance": 0,
+                //距离比较类型, 0等于1不等于2大于3大于等于4小于5小于等于
+                //3即大于等于
+                "distancetype": 3,
+                //武器需求
+                "weapon": [],
+                //指定配件
+                "mod": [],
+                //地图需求, 与撤离部分定义一致
+                "location": 0,
+                //在指定区域完成, 填写zoneid
+                "zone": [],
+                //装备需求
+                "equip": [],
+                //指定敌人的装备
+                "enemyequip": []
+            },
+            {
+                //杀敌条件
+                "$type": "kill",
+                "id": "示例任务2杀敌需求2",
+                //是否单局完成
+                "oneraid": false,
+                //数量
+                "count": 1,
+                "counterid": "示例任务2杀敌需求2_计数器",
+                //AI类型, 此处为AnyPmc, 即任意PMC
+                "bot": "AnyPmc",
+                //指定AI角色, 用于处理特定类型的AI或Boss
+                "role": [],
+                "conditionid": "示例任务2杀敌需求2_计数器_需求",
+                //躯体部位, 依然位运算, 0为不要求
+                //1头2胸4胃8/16左右手32/64左右腿
+                "bodyPart": 0,
+                //时间区间, 24小时制
+                "daytime": [
+                    0,
+                    0
+                ],
+                //距离要求
+                "distance": 0,
+                //距离比较类型, 0等于1不等于2大于3大于等于4小于5小于等于
+                //3即大于等于
+                "distancetype": 3,
+                //武器需求
+                "weapon": [
+                    "54491c4f4bdc2db1078b4568"
+                ],
+                //指定配件
+                "mod": [],
+                //地图需求, 与撤离部分定义一致
+                "location": 0,
+                //在指定区域完成, 填写zoneid
+                "zone": [],
+                //装备需求
+                //指定你的装备组, 二维数组, 每一个子数组是一类装备
+                //这里是对应头套和耳机
+                //比如你需要任意巴拉克拉瓦, 就把所有的巴拉克拉瓦写进一个数组
+                //这样就是一个装备组合
+                "equip": [
+                    [
+                        "6571bde39837cc51b800c212"
+                    ],
+                    [
+                        "5645bcc04bdc2d363b8b4572"
+                    ]
+                ],
+                //指定敌人的装备
+                "enemyequip": []
+            },
+            {
+                //杀敌条件
+                "$type": "kill",
+                "id": "示例任务2杀敌需求3",
+                //是否单局完成
+                "oneraid": false,
+                //数量
+                "count": 1,
+                "counterid": "示例任务2杀敌需求3_计数器",
+                //AI类型, 此处为Bear, 即BearPMC干员
+                "bot": "Bear",
+                //指定AI角色, 用于处理特定类型的AI或Boss
+                "role": [],
+                "conditionid": "示例任务2杀敌需求3_计数器_需求",
+                //躯体部位, 依然位运算, 0为不要求
+                //1头2胸4胃8/16左右手32/64左右腿
+                "bodyPart": 0,
+                //时间区间, 24小时制
+                "daytime": [
+                    6,
+                    18
+                ],
+                //距离要求
+                "distance": 10,
+                //距离比较类型, 0等于1不等于2大于3大于等于4小于5小于等于
+                //3即大于等于
+                "distancetype": 3,
+                //武器需求
+                "weapon": [
+                    "574d967124597745970e7c94"
+                ],
+                //指定配件
+                "mod": [
+                    //这里由于bsg数据定义字段问题, 与装备不一致
+                    //这里每个数组对应一个组合
+                    //比如这里是Hex消音器
+                    //如果你需要任意光学瞄具, 则需要把所有光学瞄具展开成数组
+                    //如果你需要指定多个配件, 则需要把他们填入一个数组
+                    [
+                        "593d490386f7745ee97a1555"
+                    ]
+                ],
+                //地图需求, 与撤离部分定义一致
+                "location": 0,
+                //在指定区域完成, 填写zoneid
+                "zone": [],
+                //装备需求
+                //指定你的装备组, 二维数组, 每一个子数组是一类装备
+                //这里是对应头套和耳机
+                //比如你需要任意巴拉克拉瓦, 就把所有的巴拉克拉瓦写进一个数组
+                //这样就是一个装备组合
+                "equip": [],
+                //指定敌人的装备
+                "enemyequip": []
+            },
+            {
+                //杀敌条件
+                "$type": "kill",
+                "id": "示例任务2杀敌需求4",
+                //是否单局完成
+                "oneraid": false,
+                //数量
+                "count": 1,
+                "counterid": "示例任务2杀敌需求4_计数器",
+                //AI类型, 此处为Savage即任意Scav
+                "bot": "Savage",
+                //指定AI角色, 用于处理特定类型的AI或Boss, 此处指定为Sanitar
+                "role": [
+                    "bossSanitar"
+                ],
+                "conditionid": "示例任务2杀敌需求4_计数器_需求",
+                //躯体部位, 依然位运算, 0为不要求
+                //1头2胸4胃8/16左右手32/64左右腿
+                "bodyPart": 0,
+                //时间区间, 24小时制
+                "daytime": [
+                    0,
+                    0
+                ],
+                //距离要求
+                "distance": 0,
+                //距离比较类型, 0等于1不等于2大于3大于等于4小于5小于等于
+                //3即大于等于
+                "distancetype": 3,
+                //武器需求
+                "weapon": [],
+                //指定配件
+                "mod": [],
+                //地图需求, 与撤离部分定义一致
+                "location": 32,
+                //在指定区域完成, 填写zoneid
+                "zone": [],
+                //装备需求
+                //指定你的装备组, 二维数组, 每一个子数组是一类装备
+                //这里是对应头套和耳机
+                //比如你需要任意巴拉克拉瓦, 就把所有的巴拉克拉瓦写进一个数组
+                //这样就是一个装备组合
+                "equip": [],
+                //指定敌人的装备
+                "enemyequip": []
+            },
+            {
+                //杀敌条件
+                "$type": "kill",
+                "id": "示例任务2杀敌需求5",
+                //是否单局完成
+                "oneraid": false,
+                //数量
+                "count": 1,
+                "counterid": "示例任务2杀敌需求5_计数器",
+                //AI类型, 此处为Savage即任意Scav
+                "bot": "Savage",
+                //指定AI角色, 用于处理特定类型的AI或Boss, 此处指定为Sanitar
+                "role": [],
+                "conditionid": "示例任务2杀敌需求5_计数器_需求",
+                //躯体部位, 依然位运算, 0为不要求
+                //1头2胸4胃8/16左右手32/64左右腿
+                "bodyPart": 0,
+                //时间区间, 24小时制
+                "daytime": [
+                    0,
+                    0
+                ],
+                //距离要求
+                "distance": 0,
+                //距离比较类型, 0等于1不等于2大于3大于等于4小于5小于等于
+                //3即大于等于
+                "distancetype": 3,
+                //武器需求
+                "weapon": [],
+                //指定配件
+                "mod": [],
+                //地图需求, 与撤离部分定义一致
+                "location": 1,
+                //在指定区域完成, 填写zoneid
+                "zone": [
+                    "huntsman_020"
+                ],
+                //装备需求
+                //指定你的装备组, 二维数组, 每一个子数组是一类装备
+                //这里是对应头套和耳机
+                //比如你需要任意巴拉克拉瓦, 就把所有的巴拉克拉瓦写进一个数组
+                //这样就是一个装备组合
+                "equip": [],
+                //指定敌人的装备
+                "enemyequip": []
+            }
+        ],
+        "Failed": []
+    },
+    "QuestReward": [
+        //信任度奖励
+        {
+            //奖励类型为信任度
+            "$type": "standing",
+            //大部分参数是通用定义
+            "ID": "示例任务2信任度奖励1",
+            "Quest": "示例任务2",
+            //对应商人ID
+            "TraderID": "ExampleTrader",
+            //好感度数值
+            "Count": 0.02,
+            "Stage": 1,
+            "Hidden": false,
+            "Unknown": false,
+            "IsAchievement": false
+        }
+    ]
+}
+</file>
+
+<file path="示例包/questdata/logic/示例任务2.jsonc">
+{
+    //任务ID
+    "id": "示例任务2",
+    //前置任务状态
+    "prequestdata": {
+        //key-value格式, 任务ID: 状态
+        //位运算处理, 1锁定2可用4进行中8可交付16完成32失败64可重新开始512等待CD, 128和256定义不明
+        //这里16表示完成
+        "示例任务1": 16
+    },
+    //前置商人好感
+    "pretraderstanding": {},
+    //前置商人等级
+    "pretraderlevel": {},
+    //前置玩家等级
+    "prelevel": 0
+}
+</file>
+
+<file path="示例包/questdata/reward/rewards.jsonc">
+[
+    //任务奖励大文件
+    //这里其实可以存放多个文件, 以提高区分度和结构可读性
+    {
+        //商人解锁奖励
+        "$type": "trader",
+        "ID": "示例任务3商人解锁奖励1",
+        //解锁的商人ID
+        "Trader": "ExampleTrader2",
+        "Quest": "示例任务3",
+        "Stage": 1,
+        "Hidden": false,
+        "Unknown": false,
+        "IsAchievement": false
+    },
+    {
+        //物品奖励
+        "$type": "item",
+        "ID": "示例任务3物品奖励1",
+        //物品内容
+        "Items": [
+            {
+                "_id": "示例任务3物品奖励1物品",
+                "_tpl": "5449016a4bdc2d6f028b456f",
+                "upd": {
+                    "StackObjectsCount": 20000
+                }
+            }
+        ],
+        //是否带勾
+        "FindInRaid": false,
+        "Quest": "示例任务3",
+        "Stage": 1,
+        "Hidden": false,
+        "Unknown": false,
+        "IsAchievement": false,
+        //物品堆叠(显示的奖励的堆叠, 和实际物品的堆叠可以不同步)
+        "Count": 20000
+    },
+    {
+        //技能奖励
+        "$type": "skillexperience",
+        "ID": "示例任务4技能奖励1",
+        "Quest": "示例任务4",
+        "Stage": 1,
+        "Hidden": false,
+        "Unknown": false,
+        "IsAchievement": false,
+        //限定游戏版本的奖励, 通常只有黑边蓝边区分, 位运算
+        //124分别为123级白边(Standard/Left behind/Prepare to Escape), 8黑边16蓝边32dev64从零开始128从零开始live版256和512不明
+        //1007即1+2+4+8+32+64+128+256+512, 也就是除了蓝边之外的版本
+        "AvailableGameEdition": 1007,
+        //技能
+        "Skill": "CovertMovement",
+        //等级
+        "Count": 3
+    },
+    {
+        //成就奖励
+        "$type": "achievement",
+        //成就ID
+        "Target": "示例成就1",
+        "Quest": "示例任务4",
+        "Stage": 1,
+        "Hidden": false,
+        "Unknown": false,
+        "IsAchievement": false,
+        "ID": "示例任务4_成就奖励"
+    }
+]
+</file>
+
+<file path="示例包/questdata/achievement.jsonc">
+[
+    //成就合并文件
+    {
+        //id
+        "id": "示例成就1",
+        //图片路径
+        "img": "/files/icon/example1.png",
+        //成就名
+        "name": "示例成就1",
+        //成就描述
+        "description": "我是一个示例成就",
+        //成就稀有度, 三个等级, Common/Rare/Legendary
+        "rarity": "Legendary",
+        //阵营? 我没试过
+        "side": "All",
+        //未知参数
+        "instantComplete": false,
+        //未知参数
+        "showNotificationsInGame": false,
+        //显示进度? 作用不明
+        "showProgress": false,
+        //是否为隐藏成就
+        "hidden": true,
+        //是否显示成就要求
+        "showConditions": false,
+        //显示进度条
+        "progressBarEnabled": false,
+        //成就要求
+        //与任务条件定义一致
+        //部分条件需求会导致成就出错, 推荐使用任务手动发放, 这里将成就条件设为无法完成(1000米外近战武器杀死btr射手10000个), 由任务发放成就
+        "conditions": {
+            "finish": [
+                {
+                    "$type": "kill",
+                    "id": "示例成就1_需求",
+                    //这个参数可以直接为任务条件添加本地化
+                    "locale": "消灭任意目标",
+                    "oneraid": false,
+                    "count": 10000,
+                    "counterid": "示例成就1_需求_计数器",
+                    "bot": "Savage",
+                    "role": [
+                        "shooterBTR"
+                    ],
+                    "conditionid": "示例成就1_需求_计数器_需求",
+                    "bodyPart": 0,
+                    "daytime": [
+                        0,
+                        0
+                    ],
+                    "distance": 1000,
+                    "distancetype": 3,
+                    "weapon": [
+                        "5bffdd7e0db834001b734a1a"
+                    ],
+                    "mod": [],
+                    "location": 8191,
+                    "zone": [],
+                    "equip": [],
+                    "enemyequip": []
+                }
+            ],
+            "failed": []
+        },
+        //成就奖励
+        //依然与任务定义一致
+        "rewards": [
+            {
+                //装饰内容奖励
+                "$type": "customization",
+                //目标ID
+                "Target": "示例狗牌样式",
+                //设置为成就的话这里就指向成就ID
+                "Quest": "示例成就1",
+                "Stage": 1,
+                "Hidden": false,
+                "Unknown": false,
+                "IsAchievement": true,
+                "ID": "示例成就1_装饰奖励"
+            }
+        ]
+    }
+]
+</file>
+
+<file path="示例包/questdata/init.jsonc">
+{
+    //同时支持全部加载和单文件加载
+    //这里是单文件加载所有任务
+    "示例任务3": {
+        "ID": "示例任务3",
+        "Type": 3,
+        "ImagePath": "/files/quest/icon/illust_76542723_20190926_114401.jpg",
+        "TraderID": "ExampleTrader",
+        "Location": "any",
+        "Restartable": false,
+        "QuestData": {
+            "Finish": [
+                {
+                    //踩点需求
+                    "$type": "visit",
+                    //id
+                    "id": "示例任务3踩点需求1",
+                    //是否要求单局完成
+                    "oneraid": false,
+                    //次数
+                    "count": 1,
+                    //counterid
+                    "counterid": "示例任务3踩点需求1_计数器",
+                    //踩点的位置的zoneid, 目前不支持自定义, 清自行查阅原版
+                    "zoneid": "place_pacemaker_SCOUT_01",
+                    //conditionid
+                    //这两个id的定义很难讲清楚, 推荐按照范例来, 即_计数器和_计数器_需求
+                    "conditionid": "示例任务3踩点需求1_计数器_需求"
+                },
+                {
+                    //撤离需求
+                    "$type": "exit",
+                    //id
+                    "id": "示例任务3撤离需求1",
+                    //是否要求单局完成
+                    "oneraid": false,
+                    //次数
+                    "count": 1,
+                    //指定地图, 依然使用位运算
+                    //1海关, 2森林, 4白天工厂, 8夜间工厂, 16实验室, 32海岸线, 64储备站, 128立交桥, 256灯塔, 512街区, 1024中心区, 2048高级中心区, 4096迷宫
+                    "location": 32,
+                    //撤离状态, 位运算
+                    //1幸存, 2匆匆逃离, 4阵亡, 8行动中失踪, 16中途离开, 32转移
+                    //35即32+2+1
+                    "status": 35,
+                    //是否指定撤离点
+                    "chooseexitpoint": false,
+                    //撤离点id, 不指定留空即可
+                    "exitpoint": ""
+                },
+                {
+                    //撤离需求
+                    "$type": "exit",
+                    //id
+                    "id": "示例任务3撤离需求2",
+                    //是否要求单局完成
+                    "oneraid": false,
+                    //次数
+                    "count": 1,
+                    //指定地图, 依然使用位运算
+                    //1海关, 2森林, 4白天工厂, 8夜间工厂, 16实验室, 32海岸线, 64储备站, 128立交桥, 256灯塔, 512街区, 1024中心区, 2048高级中心区, 4096迷宫
+                    "location": 32,
+                    //撤离状态, 位运算
+                    //1幸存, 2匆匆逃离, 4阵亡, 8行动中失踪, 16中途离开, 32转移
+                    //3即2+1
+                    "status": 3,
+                    //是否指定撤离点
+                    "chooseexitpoint": true,
+                    //撤离点id, 不指定留空即可
+                    "exitpoint": "Road to Customs"
+                }
+            ],
+            "Failed": []
+        },
+        "QuestReward": []
+    },
+    "示例任务4": {
+        "ID": "示例任务4",
+        "Type": 3,
+        "ImagePath": "/files/quest/icon/105182833_p0.png",
+        "TraderID": "ExampleTrader2",
+        "Location": "5704e3c2d2720bac5b8b4567",
+        "Restartable": true,
+        "QuestData": {
+            "Finish": [
+                {
+                    //等级需求
+                    "$type": "level",
+                    "id": "示例任务4等级需求1",
+                    "count": 75
+                },
+                {
+                    //安放物品需求
+                    "$type": "place",
+                    "id": "示例任务4安放需求1",
+                    //安放时间
+                    "time": 5,
+                    //物品id
+                    "itemid": "5c94bbff86f7747ee735c08f",
+                    //安放物品的位置, zoneid
+                    "zoneid": "place_skier_12_3",
+                    //需求数量
+                    "count": 1
+                },
+                {
+                    //技能等级需求
+                    "$type": "skill",
+                    "id": "示例任务4技能需求1",
+                    //技能
+                    "skill": "Perception",
+                    //等级
+                    "count": 15
+                }
+            ],
+            "Failed": [
+                {
+                    //这里是死亡失败
+                    //撤离需求
+                    "$type": "exit",
+                    //id
+                    "id": "示例任务4失败条件1",
+                    //是否要求单局完成
+                    "oneraid": false,
+                    //次数
+                    "count": 1,
+                    //指定地图, 依然使用位运算
+                    //1海关, 2森林, 4白天工厂, 8夜间工厂, 16实验室, 32海岸线, 64储备站, 128立交桥, 256灯塔, 512街区, 1024中心区, 2048高级中心区, 4096迷宫
+                    "location": 2,
+                    //撤离状态, 位运算
+                    //1幸存, 2匆匆逃离, 4阵亡, 8行动中失踪, 16中途离开, 32转移
+                    //3即2+1
+                    "status": 28,
+                    //是否指定撤离点
+                    "chooseexitpoint": false,
+                    //撤离点id, 不指定留空即可
+                    "exitpoint": ""
+                }
+            ]
+        },
+        "QuestReward": []
+    }
+}
+</file>
+
+<file path="示例包/questdata/logic.jsonc">
+{
+    //任务逻辑树合并文件
+    //参考logic文件夹里的内容
+    "示例任务3": {
+        "id": "示例任务3",
+        "prequestdata": {},
+        "pretraderstanding": {},
+        "pretraderlevel": {
+            "54cb50c76803fa8b248b4571": 2
+        },
+        "prelevel": 0
+    },
+    "示例任务4": {
+        "id": "示例任务4",
+        "prequestdata": {},
+        "pretraderstanding": {},
+        "pretraderlevel": {},
+        "prelevel": 0
+    }
+}
+</file>
+
+<file path="示例包/recipe/craft/示例配方1.jsonc">
+{
+    //普通配方
+    "$type": "normal",
+    //配方id, 全局唯一
+    "ID": "示例配方1",
+    //配方需要的藏身处区域
+    "Area": 10,
+    //需要的区域等级
+    "AreaLevel": 1,
+    //输出产物
+    "Output": "示例物品1",
+    //输出数量
+    "OutputCount": 1,
+    //制作时间, 秒为单位
+    "Time": 21600,
+    //是否需要全程通电
+    "NeedFuel": false,
+    //配方需求
+    //结构相同, 只是定义不同
+    "Require": {
+        //工具需求(不消耗, 但是依然会提交进去)
+        "Tool": {
+            "590c639286f774151567fa95": 1
+        },
+        //物品需求
+        "Item": {
+            "58d3db5386f77426186285a0": 1
+        }
+    }
+}
+</file>
+
+<file path="示例包/recipe/craft.jsonc">
+{
+    //配方合并文件, 这里可以同时存储多个配方
+    "示例配方2": {
+        //锁定配方(需要任务解锁)
+        "$type": "locked",
+        "ID": "示例配方2",
+        "Area": 7,
+        "AreaLevel": 2,
+        "Output": "示例针剂1",
+        "OutputCount": 1,
+        "Time": 21600,
+        "NeedFuel": false,
+        //是否锁定
+        "Locked": true,
+        //任务
+        "Quest": "示例任务4",
+        //任务阶段
+        "QuestStage": 1,
+        //是否为不可见奖励(完成任务后才知道奖励内容)
+        "Unknown": true,
+        "Require": {
+            "Tool": {},
+            "Item": {
+                "544fb3f34bdc2d03748b456a": 2
+            }
+        }
+    }
+}
+</file>
+
+<file path="示例包/recipe/scavcase.jsonc">
+{
+    //Scav宝箱配方
+    "示例Scav宝箱": {
+        //id
+        "id": "示例Scav宝箱",
+        //时长
+        "time": 3600,
+        //物品需求
+        "requires": {
+            "示例货币": 100,
+            "示例针剂1": 1
+        },
+        //可能的奖励
+        "rewards": {
+            //普通物品奖励数量区间
+            "common": [
+                1,
+                4
+            ],
+            //稀有物品奖励数量区间
+            "rare": [
+                1,
+                4
+            ],
+            //超稀有物品奖励数量区间
+            "superrare": [
+                1,
+                4
+            ]
+            //稀有度是在物品里定义的, 和价值无关
+        }
+    }
+}
+</file>
+
+<file path="示例包/traderdata/assort/exampletrader.jsonc">
+[
+    //报价单合并文件
+    {
+        //普通报价单(和锁定区分)
+        "$type": "normal",
+        //ID(需要和主物品的ID一致)
+        "ID": "报价单范例1",
+        //报价单所属的商人
+        "Trader": "ExampleTrader",
+        //物品内容
+        "Item": [
+            {
+                //主物品(parentId和slotId为hideout, 一个报价单只能有一个主物品)
+                //主物品的识别ID, 全局唯一不可重复
+                "_id": "报价单范例1",
+                //主物品的物品ID(具体的物品)
+                "_tpl": "示例物品1",
+                //parentId和slotId, 此处用于标识主物品和构建树结构
+                "parentId": "hideout",
+                "slotId": "hideout",
+                //upd, 存储报价单的部分数据
+                "upd": {
+                    //最大购买数量
+                    "BuyRestrictionMax": 1,
+                    //已购买数量, 无用, 仅做保留, 填0即可
+                    "BuyRestrictionCurrent": 0,
+                    //商人处一次补货的物品数量
+                    "StackObjectsCount": 999999,
+                    //不显示具体存货数量(即显示为"大量")
+                    "UnlimitedCount": true
+                }
+            }
+        ],
+        //交易部分
+        //狗牌需求, 此处留空, 见下
+        "DogTag": {},
+        //物品需求, KvP(Key-Value-Pair结构, 物品id: 数量)
+        "Barter": {
+            //物品id后面跟数量
+            "590a373286f774287540368b": 1,
+            "5d0376a486f7747d8050965c": 1
+        },
+        //需要的信任度等级
+        "TrustLevel": 1,
+        //是否为武器, 此参数已失去作用, 仅做保留
+        "isWeapon": false
+    },
+    {
+        "$type": "normal",
+        "ID": "报价单范例2",
+        "Trader": "ExampleTrader",
+        "Item": [
+            {
+                "_id": "报价单范例2",
+                "_tpl": "示例物品1",
+                "parentId": "hideout",
+                "slotId": "hideout",
+                "upd": {
+                    "BuyRestrictionMax": 1,
+                    "BuyRestrictionCurrent": 0,
+                    "StackObjectsCount": 999999,
+                    "UnlimitedCount": true
+                }
+            }
+        ],
+        //狗牌交易内容
+        //狗牌交易疑似是不识别物品ID的, 只依靠阵营和等级作区分, 物品ID仅做显示用
+        //这里使用默认的Bear和Usec狗牌
+        "DogTag": {
+            //狗牌id对应的数据
+            "59f32c3b86f77472a31742f0": {
+                //数量
+                "count": 1,
+                //等级
+                "level": 20,
+                //阵营
+                "side": "Usec"
+            },
+            "59f32bb586f774757e1e8442": {
+                "count": 1,
+                "level": 20,
+                "side": "Bear"
+            }
+        },
+        "Barter": {},
+        "TrustLevel": 1
+    },
+    {
+        //锁定的报价单, 需要完成任务解锁
+        "$type": "locked",
+        "ID": "报价单范例3",
+        "Trader": "ExampleTrader",
+        "Item": [
+            {
+                "_id": "报价单范例3",
+                "_tpl": "示例物品1",
+                "parentId": "hideout",
+                "slotId": "hideout",
+                "upd": {
+                    "BuyRestrictionMax": 1,
+                    "BuyRestrictionCurrent": 0,
+                    "StackObjectsCount": 999999,
+                    "UnlimitedCount": true
+                }
+            }
+        ],
+        "DogTag": {
+            "59f32bb586f774757e1e8442": {
+                "count": 1,
+                "level": 20,
+                "side": "Any"
+            }
+        },
+        "Barter": {},
+        "TrustLevel": 1,
+        "isWeapon": false,
+        //是否锁定
+        "Locked": true,
+        //任务ID
+        //报价单并不支持成就解锁
+        "Quest": "示例任务1",
+        //任务状态, 0开始1完成2失败
+        "QuestStage": 1,
+        //是否为未知奖励
+        "Unknown": false
+    },
+    {
+        "$type": "normal",
+        "ID": "报价单范例4",
+        "Trader": "ExampleTrader",
+        "Item": [
+            {
+                "_id": "报价单范例4",
+                "_tpl": "示例物品1",
+                "parentId": "hideout",
+                "slotId": "hideout",
+                "upd": {
+                    "BuyRestrictionMax": 100,
+                    "BuyRestrictionCurrent": 0,
+                    "StackObjectsCount": 999999,
+                    "UnlimitedCount": true
+                }
+            }
+        ],
+        "DogTag": {},
+        "Barter": {
+            "示例货币": 100
+        },
+        "TrustLevel": 1,
+        "isWeapon": false
+    },
+    {
+        "$type": "normal",
+        "ID": "报价单范例5",
+        "Trader": "ExampleTrader",
+        "Item": [
+            {
+                "_id": "报价单范例5",
+                "_tpl": "示例货币",
+                "parentId": "hideout",
+                "slotId": "hideout",
+                "upd": {
+                    "StackObjectsCount": 999999,
+                    "UnlimitedCount": true
+                }
+            }
+        ],
+        "DogTag": {},
+        "Barter": {
+            "5449016a4bdc2d6f028b456f": 100
+        },
+        "TrustLevel": 1,
+        "isWeapon": false
+    },
+    {
+        "$type": "normal",
+        "ID": "报价单范例6",
+        "Trader": "ExampleTrader2",
+        "Item": [
+            //复杂物品, 通常是武器, 树状结构, 除upd外和原版内容一致
+            {
+                "_id": "报价单范例6",
+                "_tpl": "5c07c60e0db834002330051f",
+                "parentId": "hideout",
+                "slotId": "hideout",
+                "upd": {
+                    //武器专有参数, 开火模式
+                    "FireMode": {
+                        "FireMode": "single"
+                    },
+                    "BuyRestrictionMax": 1,
+                    "BuyRestrictionCurrent": 0,
+                    "StackObjectsCount": 999999,
+                    "UnlimitedCount": true
+                }
+            },
+            {
+                "_id": "f99fd4e4792190af8264e040",
+                "_tpl": "55802f5d4bdc2dac148b458f",
+                //子物品的树结构关系, parentId指向父物品的_id, slotId指向槽位id
+                "parentId": "报价单范例6",
+                "slotId": "mod_pistol_grip"
+            },
+            {
+                "_id": "54aeb81d4fc58408af288f66",
+                "_tpl": "55802d5f4bdc2dac148b458e",
+                "parentId": "报价单范例6",
+                "slotId": "mod_magazine"
+            },
+            {
+                "_id": "e119dc184c5c6f862255eda3",
+                "_tpl": "63f5ed14534b2c3d5479a677",
+                "parentId": "报价单范例6",
+                "slotId": "mod_reciever"
+            },
+            {
+                "_id": "eae2acd79148c665c95af0e0",
+                "_tpl": "5c793fb92e221644f31bfb64",
+                "parentId": "报价单范例6",
+                "slotId": "mod_stock"
+            },
+            {
+                "_id": "300cc34f501dae2e31cf7570",
+                "_tpl": "5d44334ba4b9362b346d1948",
+                "parentId": "报价单范例6",
+                "slotId": "mod_charge"
+            },
+            {
+                "_id": "1e811988684993b2b6dc0697",
+                "_tpl": "618b9643526131765025ab35",
+                "parentId": "e119dc184c5c6f862255eda3",
+                "slotId": "mod_scope"
+            },
+            {
+                "_id": "dab13a884ac5c221ff1df307",
+                "_tpl": "63d3d44a2a49307baf09386d",
+                "parentId": "e119dc184c5c6f862255eda3",
+                "slotId": "mod_barrel"
+            },
+            {
+                "_id": "a17318e21e6eeb7d237967af",
+                "_tpl": "5c78f2492e221600114c9f04",
+                "parentId": "e119dc184c5c6f862255eda3",
+                "slotId": "mod_handguard"
+            },
+            {
+                "_id": "eda3047b0819038a681f4e96",
+                "_tpl": "5bc09a18d4351e003562b68e",
+                "parentId": "e119dc184c5c6f862255eda3",
+                "slotId": "mod_sight_rear",
+                "upd": {
+                    "Sight": {
+                        "ScopesCurrentCalibPointIndexes": [
+                            0
+                        ],
+                        "ScopesSelectedModes": [
+                            0
+                        ],
+                        "SelectedScope": 0
+                    }
+                }
+            },
+            {
+                "_id": "a1c6be0ee0065d0a42443e05",
+                "_tpl": "56eabf3bd2720b75698b4569",
+                "parentId": "eae2acd79148c665c95af0e0",
+                "slotId": "mod_stock_000"
+            },
+            {
+                "_id": "6117657b1a7870e59c21b2b2",
+                "_tpl": "5b3b99475acfc432ff4dcbee",
+                "parentId": "1e811988684993b2b6dc0697",
+                "slotId": "mod_scope",
+                "upd": {
+                    "Sight": {
+                        "ScopesCurrentCalibPointIndexes": [
+                            0
+                        ],
+                        "ScopesSelectedModes": [
+                            0
+                        ],
+                        "SelectedScope": 0
+                    }
+                }
+            },
+            {
+                "_id": "67a587a8fbe9193defa1437c",
+                "_tpl": "618b9671d14d6d5ab879c5ea",
+                "parentId": "1e811988684993b2b6dc0697",
+                "slotId": "mod_mount"
+            },
+            {
+                "_id": "a1f89af831fd4cb62675c325",
+                "_tpl": "6386120cd6baa055ad1e201c",
+                "parentId": "dab13a884ac5c221ff1df307",
+                "slotId": "mod_muzzle"
+            },
+            {
+                "_id": "514e439d8c790de76c66f597",
+                "_tpl": "63d3ce281fe77d0f2801859e",
+                "parentId": "dab13a884ac5c221ff1df307",
+                "slotId": "mod_gas_block"
+            },
+            {
+                "_id": "e3d30be4ac03b2c879b9e92e",
+                "_tpl": "6269220d70b6c02e665f2635",
+                "parentId": "a17318e21e6eeb7d237967af",
+                "slotId": "mod_mount_000"
+            },
+            {
+                "_id": "4f8a5b9f488ce62b91ae82d1",
+                "_tpl": "6269220d70b6c02e665f2635",
+                "parentId": "a17318e21e6eeb7d237967af",
+                "slotId": "mod_mount_001"
+            },
+            {
+                "_id": "46c0502d171f4f4bf3dc7a4d",
+                "_tpl": "5b7be4895acfc400170e2dd5",
+                "parentId": "a17318e21e6eeb7d237967af",
+                "slotId": "mod_foregrip"
+            },
+            {
+                "_id": "0d4ba70a3d9a55e7d0b7806d",
+                "_tpl": "5bc09a30d4351e00367fb7c8",
+                "parentId": "a17318e21e6eeb7d237967af",
+                "slotId": "mod_sight_front",
+                "upd": {
+                    "Sight": {
+                        "ScopesCurrentCalibPointIndexes": [
+                            0
+                        ],
+                        "ScopesSelectedModes": [
+                            0
+                        ],
+                        "SelectedScope": 0
+                    }
+                }
+            },
+            {
+                "_id": "d7c9b7dab618a4a0264dbb60",
+                "_tpl": "626becf9582c3e319310b837",
+                "parentId": "a17318e21e6eeb7d237967af",
+                "slotId": "mod_tactical_003",
+                "upd": {
+                    "Light": {
+                        "IsActive": true,
+                        "SelectedMode": 0
+                    }
+                }
+            },
+            {
+                "_id": "7164bbcf369c6048ec6990ca",
+                "_tpl": "638612b607dfed1ccb7206ba",
+                "parentId": "a1f89af831fd4cb62675c325",
+                "slotId": "mod_muzzle"
+            },
+            {
+                "_id": "f84cc8421c58e1f08ec2e077",
+                "_tpl": "588226d124597767ad33f787",
+                "parentId": "46c0502d171f4f4bf3dc7a4d",
+                "slotId": "mod_foregrip"
+            },
+            {
+                "_id": "0753b497ccf0ca12447773f6",
+                "_tpl": "58d2912286f7744e27117493",
+                "parentId": "a1c6be0ee0065d0a42443e05",
+                "slotId": "mod_stock"
+            }
+        ],
+        "DogTag": {},
+        "Barter": {
+            "5449016a4bdc2d6f028b456f": 100
+        },
+        "TrustLevel": 1,
+        "isWeapon": true
+    }
+]
+</file>
+
+<file path="示例包/traderdata/assort/exampletrader2.jsonc">
+[
+    //报价单合并文件
+    //多文件演示
+    {
+        "$type": "normal",
+        "ID": "报价单范例7",
+        "Trader": "ExampleTrader2",
+        "Item": [
+            {
+                "_id": "报价单范例7",
+                "_tpl": "示例礼盒",
+                "parentId": "hideout",
+                "slotId": "hideout",
+                "upd": {
+                    "StackObjectsCount": 999999,
+                    "UnlimitedCount": true
+                }
+            }
+        ],
+        "DogTag": {},
+        "Barter": {
+            "5449016a4bdc2d6f028b456f": 100
+        },
+        "TrustLevel": 1,
+        "isWeapon": false
+    }
+]
+</file>
+
+<file path="示例包/traderdata/suit/suit.jsonc">
+[
+    
+]
+</file>
+
+<file path="示例包/traderdata/trader/ExampleTrader.jsonc">
+{
+    //商人ID
+    //这里大部分都是原版数据, 简单翻译一下理解就行
+    "_id": "ExampleTrader",
+    //设置为true则在商人页面不可见
+    "avatar": "/files/trader/avatar/ExampleTrader.jpg",
+    "availableInRaid": false,
+    "balance_dol": 80000000,
+    "balance_eur": 80000000,
+    "balance_rub": 80000000,
+    //是否启用保险服务
+    "insurance": {
+        "availability": false,
+        "excluded_category": [],
+        "max_return_hour": 6,
+        "max_storage_time": 168,
+        "min_payment": 0,
+        "min_return_hour": 3
+    },
+    "insuranceChance": 100,
+    "minReflashTime": 3600,
+    "maxReflashTime": 3600,
+    "showInRagfair": false,
+    "items_buy": {
+        "category": [
+            "543be5664bdc2dd4348b4569",
+            "543be5e94bdc2df1348b4568",
+            "543be6674bdc2df1348b4569",
+            "5448eb774bdc2d0a728b4567",
+            "5448ecbe4bdc2d60728b4568",
+            "5448f3ac4bdc2dce718b4569"
+        ],
+        "id_list": []
+    },
+    "items_buy_prohibited": {
+        "category": [],
+        "id_list": []
+    },
+    "loyaltyLevels": [
+        {
+            "buy_price_coef": 44,
+            "exchange_price_coef": 0,
+            "heal_price_coef": 0,
+            "insurance_price_coef": 10,
+            "minLevel": 1,
+            "minSalesSum": 0,
+            "minStanding": 0,
+            "repair_price_coef": 150
+        },
+        {
+            "buy_price_coef": 38,
+            "exchange_price_coef": 0,
+            "heal_price_coef": 0,
+            "insurance_price_coef": 8,
+            "minLevel": 12,
+            "minSalesSum": 750000,
+            "minStanding": 0.2,
+            "repair_price_coef": 125
+        },
+        {
+            "buy_price_coef": 32,
+            "exchange_price_coef": 0,
+            "heal_price_coef": 0,
+            "insurance_price_coef": 6,
+            "minLevel": 23,
+            "minSalesSum": 1600000,
+            "minStanding": 0.35,
+            "repair_price_coef": 100
+        },
+        {
+            "buy_price_coef": 26,
+            "exchange_price_coef": 0,
+            "heal_price_coef": 0,
+            "insurance_price_coef": 4,
+            "minLevel": 31,
+            "minSalesSum": 2500000,
+            "minStanding": 0.5,
+            "repair_price_coef": 75
+        }
+    ],
+    //本地化字段
+    "name": "范例商人",
+    "nickname": "范例商人",
+    "surname": "范例商人",
+    "location": "第零象限",
+    "description": "这是一个用于RITC示范包的标准商人。",
+    "repair": {
+        "availability": false,
+        "currency": "5449016a4bdc2d6f028b456f",
+        "currency_coefficient": 1,
+        "excluded_category": [],
+        "excluded_id_list": [],
+        "quality": "0.1"
+    },
+    "sell_category": [
+        "5b47574386f77428ca22b344",
+        "5b47574386f77428ca22b2f1",
+        "5b47574386f77428ca22b340",
+        "5b47574386f77428ca22b2f4",
+        "5b47574386f77428ca22b2f3",
+        "5b47574386f77428ca22b342",
+        "5b47574386f77428ca22b341",
+        "5b5f6fa186f77409407a7eb7",
+        "5b47574386f77428ca22b343"
+    ]
+}
+</file>
+
+<file path="示例包/traderdata/trader/ExampleTrader2.jsonc">
+{
+    "_id": "ExampleTrader2",
+    "avatar": "/files/trader/avatar/ExampleTrader2.jpg",
+    "balance_dol": 80000000,
+    "balance_eur": 80000000,
+    "balance_rub": 80000000,
+    "insurance": {
+        "availability": true,
+        "excluded_category": [],
+        "max_return_hour": 4,
+        "max_storage_time": 24,
+        "min_payment": 0,
+        "min_return_hour": 2
+    },
+    //下面是自定义参数
+    //回保概率
+    "insuranceChance": 100,
+    //最小刷新时间
+    "minReflashTime": 3600,
+    //最大刷新时间
+    "maxReflashTime": 3600,
+    //是否在跳蚤市场可见
+    //空商人设置此条为true会导致报错
+    "showInRagfair": false,
+    //保险文本
+    "insurance_locale": {
+        "insuranceStart": [
+            "示例商人2保险激活文本1"
+        ],
+        "insuranceFound": [
+            "示例商人2保险寻回文本1"
+        ],
+        "insuranceFailed": [
+            "示例商人2保险失败文本1"
+        ],
+        "insuranceFailedLabs": [
+            "示例商人2保险实验室失败文本1"
+        ],
+        "insuranceExpired": [
+            "示例商人2保险过期文本1"
+        ],
+        "insuranceComplete": [
+            "示例商人2保险完成文本1"
+        ]
+    },
+    "items_buy": {
+        "category": [
+            "543be5664bdc2dd4348b4569",
+            "543be5e94bdc2df1348b4568",
+            "543be6674bdc2df1348b4569",
+            "5448eb774bdc2d0a728b4567",
+            "5448ecbe4bdc2d60728b4568",
+            "5448f3ac4bdc2dce718b4569"
+        ],
+        "id_list": []
+    },
+    "items_buy_prohibited": {
+        "category": [],
+        "id_list": []
+    },
+    "loyaltyLevels": [
+        {
+            "buy_price_coef": 44,
+            "exchange_price_coef": 0,
+            "heal_price_coef": 0,
+            "insurance_price_coef": 10,
+            "minLevel": 1,
+            "minSalesSum": 0,
+            "minStanding": 0,
+            "repair_price_coef": 150
+        },
+        {
+            "buy_price_coef": 38,
+            "exchange_price_coef": 0,
+            "heal_price_coef": 0,
+            "insurance_price_coef": 8,
+            "minLevel": 12,
+            "minSalesSum": 750000,
+            "minStanding": 0.2,
+            "repair_price_coef": 125
+        },
+        {
+            "buy_price_coef": 32,
+            "exchange_price_coef": 0,
+            "heal_price_coef": 0,
+            "insurance_price_coef": 6,
+            "minLevel": 23,
+            "minSalesSum": 1600000,
+            "minStanding": 0.35,
+            "repair_price_coef": 100
+        },
+        {
+            "buy_price_coef": 26,
+            "exchange_price_coef": 0,
+            "heal_price_coef": 0,
+            "insurance_price_coef": 4,
+            "minLevel": 31,
+            "minSalesSum": 2500000,
+            "minStanding": 0.5,
+            "repair_price_coef": 75
+        }
+    ],
+    //本地化字段
+    "name": "人商例范",
+    "nickname": "人商例范",
+    "surname": "人商例范",
+    "location": "第零象限",
+    "description": "这也是一个用于RITC示范包的标准商人。",
+    "repair": {
+        "availability": false,
+        "currency": "5449016a4bdc2d6f028b456f",
+        "currency_coefficient": 1,
+        "excluded_category": [],
+        "excluded_id_list": [],
+        "quality": "0.1"
+    },
+    "sell_category": [
+        "5b47574386f77428ca22b344",
+        "5b47574386f77428ca22b2f1",
+        "5b47574386f77428ca22b340",
+        "5b47574386f77428ca22b2f4",
+        "5b47574386f77428ca22b2f3",
+        "5b47574386f77428ca22b342",
+        "5b47574386f77428ca22b341",
+        "5b5f6fa186f77409407a7eb7",
+        "5b47574386f77428ca22b343"
+    ],
+    //是否默认解锁, 设置为false则不会开局解锁
+    "unlockedByDefault": false
+}
+</file>
+
+<file path="示例包/bundles.json">
+{
+    "manifest": [
+        {
+            "key": "grassblock.pack",
+			"dependencyKeys": [
+            ]
+        },
+        {
+            "key": "string",
+			"dependencyKeys": [
+            ]
+        },
+        {
+            "key": "string",
+			"dependencyKeys": [
+            ]
+        },
+        {
+            "key": "string",
+			"dependencyKeys": [
+            ]
+        },
+        {
+            "key": "string",
+			"dependencyKeys": [
+            ]
+        },
+        {
+            "key": "string",
+			"dependencyKeys": [
+            ]
+        }
+
+    ]
+
+}
+</file>
+
+<file path="示例包/package.jsonc">
+{
+    "name": "RITC示例包",
+    "description": "RITC内置的标准范例包，包含独立物品示例、自定义资源包示例、完整的商人示例（包括任务、交易报价以及藏身处配方）。",
+    "version": "1.0.0",
+    "active": true
+}
+</file>
+
+<file path="空白包/customization/dogtag.jsonc">
+{}
+</file>
+
+<file path="空白包/locale/quest/ch.jsonc">
+{}
+</file>
+
+<file path="空白包/locale/text/ch.jsonc">
+{}
+</file>
+
+<file path="空白包/questdata/achievement.jsonc">
+[]
+</file>
+
+<file path="空白包/questdata/init.jsonc">
+{}
+</file>
+
+<file path="空白包/questdata/logic.jsonc">
+{}
+</file>
+
+<file path="空白包/recipe/craft.jsonc">
+{}
+</file>
+
+<file path="空白包/recipe/scavcase.jsonc">
+{}
+</file>
+
+<file path="空白包/bundles.json">
+{}
+</file>
+
+<file path="空白包/package.jsonc">
+{
+    "name": "RITC空白包",
+    "description": "RITC拓展包模板。",
+    "version": "1.0.0",
+    "active": true
+}
+</file>
+
+<file path="Properties/launchSettings.json">
+{
+  "profiles": {
+    "01Logging": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:4743;http://localhost:4744"
+    }
+  }
+}
+</file>
+
+<file path=".gitignore">
+# 屏蔽自动生成
+bin/
+# VSCode
+.vs/
+obj/
+</file>
+
+<file path="README.md">
+# RITC-Reborn
+RITC: 重生, 为SPT4设计的全新版本
+</file>
+
+<file path="RITC.sln">
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36717.8 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RITC", "RITC.csproj", "{B386780B-9939-5E1B-3A86-2E6F3645B18E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B386780B-9939-5E1B-3A86-2E6F3645B18E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B386780B-9939-5E1B-3A86-2E6F3645B18E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B386780B-9939-5E1B-3A86-2E6F3645B18E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B386780B-9939-5E1B-3A86-2E6F3645B18E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D23834BE-4793-4D15-A299-FE1FEDC7C461}
+	EndGlobalSection
+EndGlobal
+</file>
+
+<file path="Package.cs">
+using System.Text.Json.Serialization;
+
+namespace RITC
+{
+    public class Package
+    {
+        [JsonPropertyName("name")]
+        public string Name { get; set; }
+
+        [JsonPropertyName("description")]
+        public string Description { get; set; }
+        [JsonPropertyName("version")]
+        public string Version { get; set; }
+
+        [JsonPropertyName("active")]
+        public bool IsActive { get; set; }
+    }
+}
+</file>
+
+<file path="RITC.cs">
+using EternalCycleServer;
+using SPTarkov.DI.Annotations;
+using SPTarkov.Server.Core.Controllers;
+using SPTarkov.Server.Core.DI;
+using SPTarkov.Server.Core.Helpers.Items;
+using SPTarkov.Server.Core.Helpers.Profile;
+using SPTarkov.Server.Core.Helpers.Server;
+using SPTarkov.Server.Core.Loaders;
+using SPTarkov.Server.Core.Models.Spt.Mod;
+using SPTarkov.Server.Core.Models.Spt.Tables;
+using SPTarkov.Server.Core.Routers;
+using SPTarkov.Server.Core.Services.Modding.Custom;
+using SPTarkov.Server.Core.Services.Ragfair;
+using SPTarkov.Server.Core.Utils;
+using SPTarkov.Server.Core.Utils.Cloners;
+using System.Reflection;
+using System.Text.RegularExpressions;
+using EternalCycleServer;
+using static EternalCycleServer.ContextManager;
+using SPTarkov.Server.Core.Services.Server;
+using SPTarkov.Server.Core.Models.Spt.Bundles;
+
+namespace RITC
+{
+
+    /// <summary>
+    /// This is the replacement for the former package.json data. This is required for all mods.
+    ///
+    /// This is where we define all the metadata associated with this mod.
+    /// You don't have to do anything with it, other than fill it out.
+    /// All properties must be overriden, properties you don't use may be left null.
+    /// It is read by the mod loader when this mod is loaded.
+    /// </summary>
+    public record ModMetadata : IModMetadata
+    {
+        /// <summary>
+        /// Any string can be used for a modId, but it should ideally be unique and not easily duplicated
+        /// a 'bad' ID would be: "mymod", "mod1", "questmod"
+        /// It is recommended (but not mandatory) to use the reverse domain name notation,
+        /// see: https://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html
+        /// </summary>
+        public string ModGuid { get; init; } = "com.hiddenhiragi.ritc";
+
+        /// <summary>
+        /// The name of your mod
+        /// </summary>
+        public  string Name { get; init; } = "RITC";
+
+        /// <summary>
+        /// Who created the mod (you!)
+        /// </summary>
+        public  string Author { get; init; } = "HiddenHiragi";
+
+        /// <summary>
+        /// A list of people who helped you create the mod
+        /// </summary>
+        public  List<string>? Contributors { get; init; }
+
+        /// <summary>
+        ///  The version of the mod, follows SEMVER rules (https://semver.org/)
+        /// </summary>
+        public  SemanticVersioning.Version Version { get; init; } = new("1.2.0");
+
+        /// <summary>
+        /// What version of SPT is your mod made for, follows SEMVER rules (https://semver.org/)
+        /// </summary>
+        public  SemanticVersioning.Range SptVersion { get; init; } = new("~4.1.0");
+
+        /// <summary>
+        /// ModIds that you know cause problems with your mod
+        /// </summary>
+        public  List<string>? Incompatibilities { get; init; }
+
+        /// <summary>
+        /// ModIds your mod REQUIRES to function
+        /// </summary>
+        public  Dictionary<string, SemanticVersioning.Range>? ModDependencies { get; init; } = new()
+{
+    { "projectspark.hiddenhiragi.eternalcycleserver", new SemanticVersioning.Range(">=1.3.1") }
+};
+
+        /// <summary>
+        /// Where to find your mod online
+        /// </summary>
+        public  string? Url { get; init; } = "https://github.com/sp-tarkov/server-mod-examples";
+
+        /// <summary>
+        /// Does your mod load bundles? (e.g. new weapon/armor mods)
+        /// </summary>
+        public  bool? IsBundleMod { get; init; } = false;
+
+        /// <summary>
+        /// What Licence does your mod use
+        /// </summary>
+        public  string? License { get; init; } = "MIT";
+
+        public bool HasPrepatcher { get; init; } = false;
+    }
+
+    // We want to load after PreSptModLoader is complete, so we set our type priority to that, plus 1.
+    [Injectable(TypePriority = OnLoadOrder.Preload + 1)]
+    public class RITC(
+        CustomItemService customItemService,
+        ModHelper modHelper,
+        ItemHelper itemHelper,
+        JsonUtil jsonUtil,
+        ICloner cloner,
+        ConfigServer configServer,
+        ImageRouter imageRouter,
+        PresetHelper presetHelper,
+        RagfairOfferService ragfairOfferService,
+        RagfairController ragfairController,
+        TemplateTable templateTable,
+        LocaleTable localeTable,
+        GlobalTable globalTable,
+        TradersTable tradersTable,
+        HideoutTable hideoutTable,
+        LocationTable locationTable,
+        HandbookHelper handbookHelper,
+        BundleHashCacheService bundleHashCacheService,
+        BundleLoader bundleLoader
+        ) // We inject a logger for use inside our class, it must have the class inside the diamond <> brackets
+        : IOnLoad // Implement the IOnLoad interface so that this mod can do something on server load
+    {
+        public static string modPath = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+        public static string author = "<color=#B0E0E6>RITC</color>";
+        public static Dictionary<string, Package> PackagePath = new Dictionary<string, Package>();
+        public async Task OnLoadAsync(CancellationToken cancellationToken)
+        {
+            var pkgpath = System.IO.Path.Combine(modPath, "package/");
+            var testpkg = System.IO.Path.Combine(modPath, "示例包/");
+            //LoadPackage(testpkg, logger, databaseService, customItemService, modHelper, jsonutil, cloner, configServer, imageRouter);
+            // We can access the logger and call its methods to log to the server window and the server log file
+            string[] directories = Directory.GetDirectories(pkgpath);
+            foreach (var key in directories)
+            {
+                EventManager.DataLoadEvent.PreDataLoadEvent += (context) =>
+                {
+                    try
+                    {
+                        LoadPackage(key, context, bundleHashCacheService, bundleLoader);
+                        LoadAllBundleFromPack(bundleHashCacheService, bundleLoader, jsonUtil);
+                    }
+                    catch (Exception ex)
+                    {
+                    }
+                };
+            }
+            //Utils.commonLogger.Success("妈的有病啊? 没见过后加载啊?");
+            EventManager.OnAfterModLoadedEvent += (context) =>
+            {
+                Utils.commonLogger.Info($"共加载了{PackagePath.Keys.Count}个扩展包");
+                foreach (var kvp in PackagePath)
+                {
+                    Utils.commonLogger.Info($"扩展包: {kvp.Value.Name}");
+                    Utils.commonLogger.Info($"版本: {kvp.Value.Version}");
+                    Utils.commonLogger.Info($"{kvp.Value.Description}");
+                }
+            };
+
+            // Inform the server our mod has finished doing work
+            return;
+        }
+
+        public static void LoadPackage(string pkgpath, LoadModContext context, BundleHashCacheService bundleHashCacheService, BundleLoader bundleLoader)
+        {
+            //var databaseService = ServiceLocator.ServiceProvider.GetService<DatabaseService>();
+
+
+            var package = Utils.LoadJsonCFromPath<Package>(System.IO.Path.Combine(pkgpath, "package.jsonc"));
+            var datapath = Path.Combine(pkgpath, "packdata/");
+            if (package.IsActive)
+            {
+                var name = package.Name;
+                var version = package.Version;
+                var creator = $"<color=#B0E0E6>RITC扩展包 - {name}</color>";
+
+                //捋一捋
+                //缺了兑换码, sloticon示例, 标靶示例, 装修示例, 弹挂布局示例
+                //诶呦, 遥遥无期哟
+                //得从隔壁火神重工扒拉点资源过来
+                //反正我把重复警告杀了
+                //那么我就得做自定义icon的slot, 一个弹挂甲(包含预设), 一把武器
+                //一套兑换码, 一个狗牌, 一个地板, 一个靶子
+                //还有各种示例实例
+                //比如新增的标签系统
+                //卡池
+                //乱七八糟
+                //仿制钥匙明天还得搓了
+                //当地时间07.11.2026 23:18
+                //明天开搞。
+                //next day...
+                //内置一下武器组标签, 扫手册
+                //然后把示例武器组写一下
+                //当地时间07.12.2026 18:12
+                //差装修, 标靶
+                //武器组
+                //衣服!!
+                //当地时间07.12.2026 22:18
+                //装修, 衣服, 应该没了
+                //都是不好搞定的
+                //我要让自己休息休息....压力好大
+
+                Utils.commonLogger.Info($"加载拓展包: {name}, 版本{version}");
+                PackagePath.TryAdd(pkgpath, package);
+                ItemUtils.RegisterItem(datapath, "items/", creator, author);
+                ItemUtils.RegisterDrawPool(datapath, "pool/");
+                ItemUtils.RegisterDrawPool(datapath, "drawpool.jsonc");
+
+                ItemTagUtils.RegisterItemTag(datapath, "itemtag.jsonc");
+                GiftCodeUtils.RegisterGiftCode(datapath, "giftcode.jsonc");
+                GiftCodeUtils.RegisterGiftCode(datapath, "giftcode/");
+
+                TraderUtils.RegisterTrader(datapath, "traderdata/trader/", "res/avatar/", creator, author);
+                AssortUtils.RegisterAssort(datapath, "traderdata/assort/");
+                SuitUtils.RegisterSuit(datapath, "traderdata/suit/");
+
+                QuestUtils.RegisterQuest(datapath, "questdata/init/", "res/questimage/");
+                QuestUtils.RegisterQuest(datapath, "questdata/init.jsonc", "res/questimage/");
+                QuestUtils.RegisterQuestLogicTree(datapath, "questdata/logic/");
+                QuestUtils.RegisterQuestRewards(datapath, "questdata/reward/");
+                QuestZoneUtils.RegisterQuestZones(datapath, "questdata/zone/");
+
+                AchievementUtils.RegisterAchievement(datapath, "questdata/achievement/", "res/achievement/");
+                AchievementUtils.RegisterAchievement(datapath, "questdata/achievement.jsonc", "res/achievement/");
+
+                RecipeUtils.RegisterRecipe(datapath, "recipe/craft/");
+                RecipeUtils.RegisterRecipe(datapath, "recipe/craft.jsonc");
+                RecipeUtils.RegisterScavCaseRecipe(datapath, "recipe/scavcase/");
+                RecipeUtils.RegisterScavCaseRecipe(datapath, "recipe/scavcase.jsonc");
+                RecipeUtils.RegisterCultistCircleRecipe(datapath, "recipe/circle/");
+                RecipeUtils.RegisterCultistCircleRecipe(datapath, "recipe/circle.jsonc");
+
+                PresetUtils.RegisterPreset(datapath, "preset/");
+
+                CustomizationUtils.RegisterCustomization(datapath, "customization/normal/", "res/customization/");
+                CustomizationUtils.RegisterHideoutCustomization(datapath, "customization/hideout/");
+
+                LocaleUtils.RegisterQuestLocale(datapath, "locale/quest/", creator, author);
+
+                LocaleUtils.RegisterLocaleText(datapath, "locale/text/");
+
+                ResourceUtils.RegisterRigLayoutResource(datapath, "res/riglayout/");
+                ResourceUtils.RegisterSlotIconResource(datapath, "res/sloticon/");
+
+            }
+        }
+        public async Task LoadAllBundleFromPack(BundleHashCacheService bundleHashCacheService, BundleLoader bundleLoader, JsonUtil jsonUtil)
+        {
+            foreach (var kvp in PackagePath)
+            {
+                //Console.WriteLine($"加载Bundle: {kvp.Key}: {kvp.Value.Name}");
+                await LoadBundlesAsync(kvp.Key, kvp.Value.Name, bundleHashCacheService, bundleLoader, jsonUtil);
+            }
+        }
+        public async Task LoadBundlesAsync(string modPath, string packname, BundleHashCacheService bundleHashCacheService, BundleLoader bundleLoader, JsonUtil jsonUtil)
+        {
+            //Console.WriteLine($"读取缓存");
+            await bundleHashCacheService.HydrateCacheAsync();
+
+            //不对
+            //var modPath = mod.GetModPath();
+            //Console.WriteLine($"{modPath}");
+            var testpath = Path.Join(modPath, "bundles.json");
+            //Console.WriteLine($"{testpath}");
+            var modBundles = await jsonUtil.DeserializeFromFileAsync<BundleManifest>(
+                testpath
+            );
+
+            var bundleManifests = modBundles?.Manifest ?? [];
+            var relativeModPath = modPath.Replace('\\', '/');
+            //在这藏着呢, 草, 内置了一个拼接路径
+            //神秘
+            var match = Regex.Match(relativeModPath, @"user/.*");
+            if (match.Success)
+            {
+                relativeModPath = match.Groups[0].Value;
+            }
+
+            foreach (var bundleManifest in bundleManifests)
+            {
+
+                //Console.WriteLine($"{relativeModPath}");
+
+                //Console.WriteLine($"{Directory.GetCurrentDirectory()}"); 
+                var bundleLocalPath = Path.Join(relativeModPath, "bundles", bundleManifest.Key).Replace('\\', '/');
+
+                //Console.WriteLine($"{bundleLocalPath}");
+                if (!File.Exists(bundleLocalPath))
+                {
+                    Utils.commonLogger.Warn($"在拓展包{packname}中找不到指定的资源文件:  {bundleManifest.Key}");
+                    //logger.Warning($"在拓展包{packname}中找不到指定的资源文件:  {bundleManifest.Key}");
+                    continue;
+                }
+
+                var bundleHash = await bundleHashCacheService.CalculateHashAsync(bundleLocalPath);
+
+                bundleLoader.AddBundle(bundleManifest.Key, new BundleInfo
+                {
+                    ModPath = relativeModPath,
+                    Bundle = bundleManifest,
+                    Crc = bundleHash
+                });
+            }
+
+            await bundleHashCacheService.WriteCacheAsync();
+        }
+    }
+}
+</file>
+
+<file path="RITC.csproj">
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>_1Logging</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <OutputType>Library</OutputType>
+    <Version>0.0.1</Version>
+    <!-- The two lines below will set the output path for the binaries -->
+	  <OutputPath>I:\TKF\SPT_Runtime\user\mods\$(ProjectName)\$(AssemblyName)\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SPTarkov.Common" Version="4.1.1" />
+    <PackageReference Include="SPTarkov.DI" Version="4.1.1" />
+    <PackageReference Include="SPTarkov.Reflection" Version="4.1.1" />
+    <PackageReference Include="SPTarkov.Server.Core" Version="4.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>I:\TKF\SPT\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="EternalCycleServer">
+      <HintPath>I:\TKF\SPT_Runtime\user\mods\EternalCycleServer\EternalCycleServer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+</Project>
+</file>
+
+</files>

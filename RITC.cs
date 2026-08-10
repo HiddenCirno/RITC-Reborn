@@ -59,7 +59,7 @@ namespace RITC
         /// <summary>
         ///  The version of the mod, follows SEMVER rules (https://semver.org/)
         /// </summary>
-        public  SemanticVersioning.Version Version { get; init; } = new("1.2.0");
+        public  SemanticVersioning.Version Version { get; init; } = new("1.2.1");
 
         /// <summary>
         /// What version of SPT is your mod made for, follows SEMVER rules (https://semver.org/)
@@ -237,8 +237,8 @@ namespace RITC
                 CustomizationUtils.RegisterHideoutCustomization(datapath, "customization/hideout/");
 
                 LocaleUtils.RegisterQuestLocale(datapath, "locale/quest/", creator, author);
-
                 LocaleUtils.RegisterLocaleText(datapath, "locale/text/");
+                DialogueUtils.RegisterDialogue(datapath, "locale/dialogue/");
 
                 ResourceUtils.RegisterRigLayoutResource(datapath, "res/riglayout/");
                 ResourceUtils.RegisterSlotIconResource(datapath, "res/sloticon/");
